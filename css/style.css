@@ -116,8 +116,11 @@ button { font-family: inherit; cursor: pointer; }
 /* =============================== CAPA =================================== */
 .cover-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 40px; align-items: center; min-height: calc(100vh - 150px); }
 .logo-lockup { display: flex; align-items: center; gap: 18px; margin-bottom: 30px; }
-.logo-mark { width: 74px; height: 86px; filter: drop-shadow(0 8px 22px rgba(0,0,0,.35)); }
-.logo-mark.big { width: 96px; height: 111px; margin: 0 auto 26px; display: block; }
+/* logo oficial (PNG extraído do brandbook — símbolo N isométrico):
+   altura fixa + largura automática preserva a proporção exata do arquivo */
+.logo-mark { height: 86px; width: auto; display: block; object-fit: contain;
+  filter: drop-shadow(0 8px 22px rgba(0,0,0,.35)); }
+.logo-mark.big { height: 111px; width: auto; margin: 0 auto 26px; }
 .brand-name { font-family: var(--font-display); font-weight: 800; font-size: 2.1rem; letter-spacing: -.02em; }
 .brand-name span { color: var(--ciano-bloco); }
 .brand-slogan { font-size: .82rem; color: rgba(255,255,255,.75); letter-spacing: .04em; }
