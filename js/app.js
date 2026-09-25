@@ -7,7 +7,8 @@
   'use strict';
 
   const slides    = Array.from(document.querySelectorAll('.slide'));
-  const towerBtns = Array.from(document.querySelectorAll('.tower-link'));
+  const towerBtns = Array.from(document.querySelectorAll('.tower-link:not(.bmc-link)'));
+  const bmcLink   = document.querySelector('.tower-link.bmc-link');
   const miniBlks  = Array.from(document.querySelectorAll('.mini-block'));
   const bar       = document.getElementById('progressBar');
   const curNum    = document.getElementById('curNum');
@@ -147,6 +148,7 @@
 
     runCounters(slides[n]);
     animateLatency(slides[n]);
+    refreshBmcLink();
 
     hint.classList.add('hide');
   }
@@ -189,9 +191,37 @@
     requestAnimationFrame(tick);
   }
 
+  /* ------------------------------- abas (slide Empresa) ------------------ */
+  const tabbar = document.querySelector('.tabbar');
+  function refreshBmcLink() { // destaca o link "Canvas" na torre apenas quando a aba canvas está ativa
+    if (!bmcLink || !tabbar) return;
+    bmcLink.classList.toggle('active', current === +bmcLink.dataset.goto && !!tabbar.querySelector('.tab[data-tab="canvas"].is-active'));
+  }
+  function setTab(name) {
+    const slide = document.getElementById('slide-1');
+    if (!slide) return;
+    slide.querySelectorAll('.tab').forEach(t => {
+      const on = t.dataset.tab === name;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', String(on));
+    });
+    slide.querySelectorAll('.tab-panel').forEach(p => { p.hidden = p.dataset.panel !== name; });
+    /* reescala as animações .reveal do painel recém-mostrado */
+    const panel = slide.querySelector(`.tab-panel[data-panel="${name}"]`);
+    if (panel) panel.querySelectorAll('.reveal').forEach((el, i) => el.style.setProperty('--d', String(120 + i * 90)));
+    refreshBmcLink();
+  }
+  document.querySelectorAll('.tab').forEach(t =>
+    t.addEventListener('click', () => setTab(t.dataset.tab))
+  );
+
   /* ----------------------------- eventos UI ----------------------------- */
   document.querySelectorAll('[data-goto]').forEach(el =>
-    el.addEventListener('click', () => { stopAutoplay(); goTo(+el.dataset.goto); })
+    el.addEventListener('click', () => {
+      stopAutoplay();
+      if (el.dataset.tabTarget) setTab(el.dataset.tabTarget); // ex.: "Canvas de negócio" na torre
+      goTo(+el.dataset.goto);
+    })
   );
   miniBlks.forEach(el =>
     el.addEventListener('click', () => { stopAutoplay(); goTo(+el.dataset.slide); })
@@ -215,7 +245,7 @@
       case 'End':  e.preventDefault(); stopAutoplay(); goTo(TOTAL - 1); break;
       case 'f': case 'F': toggleFullscreen(); break;
       default:
-        if (/^[0-6]$/.test(e.key)) { stopAutoplay(); goTo(+e.key); }
+        if (/^[0-7]$/.test(e.key)) { stopAutoplay(); goTo(+e.key); }
     }
   });
 
