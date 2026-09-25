@@ -35,14 +35,64 @@
     });
   });
 
-  /* ---- fotos dos integrantes: usa <img> direto com data-photo.
-        Se o arquivo existir, a foto aparece; se falhar (404/CORS/protocolo
-        file://), o onerror mantém o placeholder elegante — sem tela quebrada. ---- */
+  /* ---- fotos dos integrantes: aceita extensões flexíveis (.jpg, .jpeg,
+        .png, .webp) e nomes com maiúsculas, acentos ou sufixos.
+        Ex.: data-photo="assets/team/jonathan.jpg" encontra também
+        "jonathan.jpeg", "Jonathan - Foto.JPEG", "jonathan_foto.png".
+        Estratégia: tenta carregar cada candidato real com Image(); o primeiro
+        que responder vira a foto. Se nenhum existir, o placeholder permanece. ---- */
+  function tryLoad(url) {
+    return new Promise((resolve, reject) => {
+      const t = new Image();
+      t.onload = () => resolve(url);
+      t.onerror = () => reject(new Error(url));
+      t.src = url;
+    });
+  }
+  async function resolvePhoto(src) {
+    const m = src.match(/^(.*\/)?(.+?)\.([A-Za-z0-9]+)$/);
+    if (!m) return [src];
+    const [, dir = '', base] = m;
+    const slug = base.toLowerCase().replace(/[^a-z0-9]+/g, ''); // "josé da silva" -> "josedasilva"
+    const candidates = [src];
+    for (const ext of ['jpeg', 'jpg', 'png', 'webp']) {
+      candidates.push(`${dir}${base}.${ext}`);                 // exato, outra extensão
+      candidates.push(`${dir}${base}.${ext.toUpperCase()}`);   // extensão maiúscula
+    }
+    for (const sep of ['', '-', '_', ' ', '%20']) {
+      for (const suf of ['foto', 'fotografia', 'profile', 'avatar', 'img', 'image']) {
+        candidates.push(`${dir}${base}${sep}${suf}.jpeg`, `${dir}${base}${sep}${suf}.jpg`);
+      }
+    }
+    // variantes com espaços/underline no lugar do hífen do nome
+    if (base.includes('-')) {
+      for (const alt of [base.replace(/-/g, ' '), base.replace(/-/g, '_'), base.replace(/-/g, '')]) {
+        candidates.push(`${dir}${alt}.jpeg`, `${dir}${alt}.jpg`);
+      }
+    }
+    // última chance: varre arquivos da pasta cujo nome normalizado coincida
+    try {
+      const r = await fetch(dir);
+      if (r.ok) {
+        const html = await r.text();
+        const re = /href="([^"?#]+?)"/gi;
+        let mm;
+        while ((mm = re.exec(html))) {
+          const name = decodeURIComponent(mm[1]);
+          if (name.startsWith('../') || name.startsWith('/')) continue;
+          const f = name.match(/^(.+?)\.(jpe?g|png|webp)$/i);
+          if (f && f[1].toLowerCase().replace(/[^a-z0-9]+/g, '').startsWith(slug)) {
+            candidates.unshift(`${dir}${encodeURI(name)}`);
+          }
+        }
+      }
+    } catch (_) { /* file:// ou sem listagem — segue com os candidatos diretos */ }
+    return [...new Set(candidates)];
+  }
   document.querySelectorAll('.avatar[data-photo]').forEach(av => {
     const img = document.createElement('img');
     img.className = 'avatar-photo';
     img.alt = '';
-    img.loading = 'lazy';
     img.decoding = 'async';
     img.addEventListener('load', () => av.classList.add('has-photo'));
     img.addEventListener('error', () => {
@@ -50,7 +100,11 @@
       img.remove();
       av.classList.remove('has-photo');
     });
-    img.src = av.dataset.photo;
+    resolvePhoto(av.dataset.photo).then(async (list) => {
+      for (const url of list) {
+        try { await tryLoad(url); img.src = url; return; } catch (_) {}
+      }
+    });
     av.appendChild(img);
   });
 
