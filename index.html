@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexBloc · Seu negócio conectado, bloco a bloco</title>
+  <meta name="description" content="Apresentação animada da nova rede NexBloc — torre de blocos: Empresa, Infra, Monitoramento, Cybersegurança e Financeiro." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== TORRE DE BLOCOS (navegação lateral) ===================== -->
+  <nav class="tower-nav" id="towerNav" aria-label="Torre de blocos — setores da implantação">
+    <div class="tower" id="towerMini">
+      <svg viewBox="0 0 120 320" aria-hidden="true">
+        <symbol id="cube-m" viewBox="0 0 100 116"><use href="#iso-cube"/></symbol>
+        <g class="mini-block" data-slide="5"><use href="#cube-m" x="34" y="14" width="52" height="60"/></g>
+        <g class="mini-block" data-slide="4"><use href="#cube-m" x="34" y="72" width="52" height="60"/></g>
+        <g class="mini-block" data-slide="3"><use href="#cube-m" x="34" y="130" width="52" height="60"/></g>
+        <g class="mini-block" data-slide="2"><use href="#cube-m" x="34" y="188" width="52" height="60"/></g>
+        <g class="mini-block" data-slide="1"><use href="#cube-m" x="34" y="246" width="52" height="60"/></g>
+      </svg>
+    </div>
+    <ul class="tower-list">
+      <li><button class="tower-link" data-goto="1"><span class="tn-num">01</span> Empresa</button></li>
+      <li><button class="tower-link" data-goto="2"><span class="tn-num">02</span> Infra</button></li>
+      <li><button class="tower-link" data-goto="3"><span class="tn-num">03</span> Monitoramento</button></li>
+      <li><button class="tower-link" data-goto="4"><span class="tn-num">04</span> Cybersegurança</button></li>
+      <li><button class="tower-link" data-goto="5"><span class="tn-num">05</span> Financeiro</button></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== PALCO DE SLIDES ===================== -->
+  <main class="deck" id="deck">
+
+    <!-- SLIDE 0 — CAPA -->
+    <section class="slide slide-cover is-active" data-index="0" id="slide-0">
+      <div class="cover-grid">
+        <div class="cover-copy">
+          <p class="eyebrow reveal">Firjan SENAI Maracanã · Projeto Integrador · Técnico em Redes de Computadores</p>
+          <div class="logo-lockup reveal">
+            <svg class="logo-mark" viewBox="-6 -2 138 160" preserveAspectRatio="xMidYMid meet" aria-label="Símbolo NexBloc"><use href="#iso-n"/></svg>
+            <div>
+              <h1 class="brand-name">Nex<span>Bloc</span></h1>
+              <p class="brand-slogan">Seu negócio conectado, bloco&nbsp;a&nbsp;bloco.</p>
+            </div>
+          </div>
+          <h2 class="cover-headline reveal">A nova rede se monta<br /><em>bloco a bloco.</em></h2>
+          <p class="cover-sub reveal">Infraestrutura IIoT para os centros de distribuição da NexBloc —
+            conectividade, visibilidade, segurança e retorno financeiro em cinco camadas.</p>
+          <button class="cta reveal" data-goto="1">Começar a apresentação
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+        <div class="cover-tower" aria-hidden="true">
+          <svg viewBox="0 0 340 560" class="tower-hero" id="towerHero">
+            <symbol id="cube-h" viewBox="0 0 100 116"><use href="#iso-cube"/></symbol>
+            <g class="hero-cube hc-5"><use href="#cube-h" x="95"  y="20"  width="150" height="174"/></g>
+            <g class="hero-cube hc-4"><use href="#cube-h" x="95"  y="126" width="150" height="174"/></g>
+            <g class="hero-cube hc-3"><use href="#cube-h" x="95"  y="232" width="150" height="174"/></g>
+            <g class="hero-cube hc-2"><use href="#cube-h" x="95"  y="338" width="150" height="174"/></g>
+            <g class="hero-cube hc-1"><use href="#cube-h" x="95"  y="444" width="150" height="174"/></g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 1 — APRESENTAÇÃO DA EMPRESA -->
+    <section class="slide slide-dark" data-index="1" id="slide-1">
+      <header class="slide-head">
+        <p class="kicker reveal">Bloco 01 · Apresentação da empresa</p>
+        <h2 class="reveal">Construímos a base do seu negócio</h2>
+        <p class="lead reveal">A NexBloc atua em infraestrutura e conectividade: módulos sólidos que se empilham
+          para erguer algo maior. Nex de nexo e <em>next</em>; Bloc de blocos — crescimento estruturado, sem improvisar.</p>
+      </header>
+      <div class="cols">
+        <div class="col card-col">
+          <article class="card reveal">
+            <h3>Objetivo</h3>
+            <p>Transformar os centros de distribuição convencionais em <strong>ecossistemas de armazenagem
+              inteligente</strong>: conectar centenas de sensores industriais e câmeras IP em tempo real,
+              com latência crítica abaixo de 25&nbsp;ms.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Justificativa</h3>
+            <p>A infraestrutura legada — feita apenas para estações administrativas — é incompatível com o volume
+              de tráfego, o tempo de resposta e as exigências atuais de cibersegurança.
+              <strong>Confiança não se instala de uma vez: se constrói.</strong></p>
+          </article>
+          <article class="card reveal">
+            <h3>Diferencial</h3>
+            <p>Entrega modular e auditável: cada bloco é testado, documentado e somado à operação —
+              sem paradas e sem surpresas no caminho.</p>
+          </article>
+        </div>
+        <div class="col team-col reveal">
+          <h3 class="team-title">Integrantes</h3>
+          <!-- Fotos: basta colocar o arquivo em assets/team/ com o nome indicado em data-photo.
+               Enquanto o arquivo não existir, o placeholder (silhueta + iniciais) é mantido. -->
+          <ul class="team-grid">
+            <li class="member"><span class="avatar" data-photo="assets/team/debora.jpg" role="img" aria-label="Foto de Debora Cristina Gomes Ribeiro (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">DC</span></span><span class="member-name">Debora Cristina Gomes Ribeiro</span></li>
+            <li class="member"><span class="avatar" data-photo="assets/team/gabriel.jpg" role="img" aria-label="Foto de Gabriel Washington Coelho da Silva (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">GW</span></span><span class="member-name">Gabriel Washington Coelho da Silva</span></li>
+            <li class="member"><span class="avatar" data-photo="assets/team/jonathan.jpg" role="img" aria-label="Foto de Jonathan Farias de Melo (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">JF</span></span><span class="member-name">Jonathan Farias de Melo</span></li>
+            <li class="member"><span class="avatar" data-photo="assets/team/lucas.jpg" role="img" aria-label="Foto de Lucas Gabriel dos Santos Bernardes (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">LG</span></span><span class="member-name">Lucas Gabriel dos Santos Bernardes</span></li>
+            <li class="member"><span class="avatar" data-photo="assets/team/natan.jpg" role="img" aria-label="Foto de Natan dos Santos Agostine (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">NS</span></span><span class="member-name">Natan dos Santos Agostine</span></li>
+          </ul>
+          <p class="team-note">As fotos dos integrantes aparecem aqui — basta colocar as imagens em <code>assets/team/</code>.</p>
+          <div class="values">
+            <span>Solidez técnica</span><span>Modularidade</span><span>Inovação contínua</span><span>Transparência</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2 — INFRA -->
+    <section class="slide slide-light" data-index="2" id="slide-2">
+      <header class="slide-head">
+        <p class="kicker reveal">Bloco 02 · Infra</p>
+        <h2 class="reveal">Infraestrutura que cresce com você</h2>
+        <p class="lead reveal">A rede da NexBloc é montada em módulos independentes que se integram sem retrabalho —
+          do cabo de cobre à fibra, do switch PoE ao ar industrial.</p>
+      </header>
+      <div class="cols">
+        <div class="col card-col">
+          <article class="chip-card reveal">
+            <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="9" width="18" height="7" rx="1.5"/><path d="M6 16v2M12 16v2M18 16v2M7 12h.01M10 12h.01"/><path d="M8 9V6M16 9V6"/></svg>
+            <div><h3>Cabeamento &amp; backbone</h3>
+            <p>Cat6A blindado, certificado ponto a ponto por Fluke Networks, e fibra <strong>10&nbsp;GbE</strong>
+               com uplinks SFP+ — fim do gargalo de switching.</p></div>
+          </article>
+          <article class="chip-card reveal">
+            <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M13 2 4.5 13.5H11L9.5 22 19 9.5h-6.5L13 2Z"/></svg>
+            <div><h3>PoE+ / PoE++</h3>
+            <p>Alimentação elétrica pelos próprios cabos (802.3at/bt): até <strong>90&nbsp;W</strong> por porta e
+               <strong>-40%</strong> em custos de infraestrutura elétrica.</p></div>
+          </article>
+          <article class="chip-card reveal">
+            <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1.2" fill="currentColor"/></svg>
+            <div><h3>Wi-Fi 6/6E industrial</h3>
+            <p>OFDMA, BSS Coloring e TWT para vencer a “gaiola de Faraday” dos galpões — bateria de sensor com
+               vida útil de até <strong>5 anos</strong>.</p></div>
+          </article>
+          <article class="chip-card reveal">
+            <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="8" cy="7" r="1.6" fill="currentColor"/><circle cx="14" cy="12" r="1.6" fill="currentColor"/><circle cx="10" cy="17" r="1.6" fill="currentColor"/></svg>
+            <div><h3>Segmentação &amp; QoS</h3>
+            <p><strong>6 VLANs</strong> isoladas por perfil + Dual-Stack IPv4/IPv6. Alarmes críticos em DSCP&nbsp;EF
+               com fila LLQ: telemetria nunca disputa banda com vídeo.</p></div>
+          </article>
+        </div>
+        <aside class="col vlan-panel reveal" aria-label="Matriz de VLANs">
+          <h3>Matriz de segmentação</h3>
+          <table class="vlan-table">
+            <thead><tr><th>VLAN</th><th>Rede</th><th>Isolamento</th></tr></thead>
+            <tbody>
+              <tr><td>10</td><td>Sensores IIoT</td><td>só broker MQTT :8883</td></tr>
+              <tr><td>20</td><td>CFTV / Câmeras</td><td>só NVR / storage</td></tr>
+              <tr><td>30</td><td>Gestão e TI</td><td>SSHv2 · SNMPv3 · RADIUS</td></tr>
+              <tr><td>40</td><td>Corporativo</td><td>ERP / WMS / internet</td></tr>
+              <tr><td>50</td><td>Visitantes</td><td>web isolada</td></tr>
+              <tr><td>99</td><td>Quarentena</td><td>tudo bloqueado</td></tr>
+            </tbody>
+          </table>
+          <p class="note">MQTT sobre TLS 1.3 substitui o HTTP polling: menos overhead, alertas em micro-mensagens.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SLIDE 3 — MONITORAMENTO -->
+    <section class="slide slide-dark" data-index="3" id="slide-3">
+      <header class="slide-head">
+        <p class="kicker reveal">Bloco 03 · Monitoramento</p>
+        <h2 class="reveal">O que você não vê, não protege</h2>
+        <p class="lead reveal">Sem monitoramento, a rede opera às cegas. Este bloco dá olhos à infraestrutura:
+          estado, desempenho e tendência — em tempo real.</p>
+      </header>
+      <div class="cols">
+        <div class="col card-col">
+          <article class="card reveal">
+            <h3>Zabbix + Grafana via SNMPv3</h3>
+            <p>Coleta criptografada e inventário automatizado de ativos. Dashboards por VLAN mostram temperatura
+              da cadeia de frio, disponibilidade de links e carga dos switches PoE.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Latência crítica &lt; 25 ms</h3>
+            <p>Alertas de telemetria priorizados de ponta a ponta. Um atraso significa produto perecível perdido —
+              monitorar é estancar perda.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Testes de estresse iperf3</h3>
+            <p>Simulações na Packet Tracer e medições reais de throughput validam cada bloco <em>antes</em> de
+              entrar em operação. Documentação viva, nomenclatura padronizada.</p>
+          </article>
+        </div>
+        <div class="col gauge-col reveal" aria-hidden="true">
+          <div class="gauge-card">
+            <p class="gauge-label">Latência — VLAN 10 · Sensores</p>
+            <p class="gauge-value"><span id="latNum">0</span><small>ms</small></p>
+            <div class="gauge-bar"><i style="--w:22%"></i></div>
+            <p class="gauge-foot"><span>SLA 25&nbsp;ms</span><span class="ok">● dentro do limite</span></p>
+          </div>
+          <div class="spark-card">
+            <p class="gauge-label">Throughput agregado · 24&nbsp;h</p>
+            <svg viewBox="0 0 300 90" class="spark">
+              <polyline id="sparkLine" points="" fill="none" stroke="url(#sparkGrad)" stroke-width="3" stroke-linecap="round"/>
+              <defs><linearGradient id="sparkGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#00C7D7"/><stop offset="1" stop-color="#005DBA"/>
+              </linearGradient></defs>
+            </svg>
+            <p class="gauge-foot"><span>Streaming CFTV estável</span><span class="ok">● sem descarte</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4 — CYBERSEGURANÇA -->
+    <section class="slide slide-navy" data-index="4" id="slide-4">
+      <header class="slide-head">
+        <p class="kicker reveal">Bloco 04 · Cybersegurança</p>
+        <h2 class="reveal">Cada dispositivo, uma identidade</h2>
+        <p class="lead reveal">Rede plana e senha compartilhada foram o legado. O novo padrão autentica
+          criptograficamente <strong>cada</strong> sensor, câmera e porta — e não confia em ninguém por padrão.</p>
+      </header>
+      <div class="sec-wrap">
+        <div class="shield reveal">
+          <svg viewBox="0 0 200 220" class="shield-svg" aria-hidden="true">
+            <path d="M100 12 188 46v62c0 52-38 84-88 100C50 192 12 160 12 108V46L100 12Z"
+                  fill="rgba(0,199,215,.07)" stroke="#00C7D7" stroke-width="3"/>
+            <path d="M64 108l24 24 48-52" fill="none" stroke="#00C7D7" stroke-width="8"
+                  stroke-linecap="round" stroke-linejoin="round" class="shield-check"/>
+          </svg>
+          <p class="shield-cap">802.1X · EAP-TLS · X.509</p>
+        </div>
+        <ul class="sec-list">
+          <li class="reveal"><strong>WPA3-Enterprise + 802.1X</strong><span>Autenticação por certificado com FreeRADIUS — adeus senhas estáticas compartilhadas.</span></li>
+          <li class="reveal"><strong>MQTTS sobre TLS 1.3</strong><span>Edge gateways industriais autenticam os sensores restritos em nome deles; tudo sai criptografado.</span></li>
+          <li class="reveal"><strong>Hardening de Camada 2</strong><span>DHCP Snooping, Dynamic ARP Inspection, BPDU Guard e Port Isolation: sem MITM, sem movimento lateral.</span></li>
+          <li class="reveal"><strong>Quarentena &amp; patches</strong><span>VLAN 99 para portas desativadas, política de atualização de firmware e inventário contínuo.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SLIDE 5 — FINANCEIRO -->
+    <section class="slide slide-light" data-index="5" id="slide-5">
+      <header class="slide-head">
+        <p class="kicker reveal">Bloco 05 · Financeiro</p>
+        <h2 class="reveal">Viabilidade: o último bloco fecha a torre</h2>
+        <p class="lead reveal">Custo × benefício com números claros: ciclo de vida de 48 meses, economia anual de
+          R$&nbsp;202&nbsp;mil e projeto autossustentável desde o primeiro ano.</p>
+      </header>
+      <div class="fin-wrap">
+        <div class="kpis">
+          <div class="kpi reveal"><p class="kpi-v">R$&nbsp;<span data-count="400" data-suffix="">0</span>&nbsp;mil</p><p class="kpi-l">CAPEX de investimento</p></div>
+          <div class="kpi reveal"><p class="kpi-v">R$&nbsp;<span data-count="6" data-suffix="">0</span>&nbsp;mil/mês</p><p class="kpi-l">OPEX recorrente</p></div>
+          <div class="kpi reveal"><p class="kpi-v"><span data-count="37" data-suffix="">0</span> meses</p><p class="kpi-l">Payback (~3,1 anos)</p></div>
+          <div class="kpi reveal"><p class="kpi-v"><span data-count="17.4" data-decimals="1" data-suffix="%">0</span></p><p class="kpi-l">ROI no ciclo de 4 anos</p></div>
+          <div class="kpi reveal kpi-accent"><p class="kpi-v">+R$&nbsp;<span data-count="120" data-suffix="">0</span>&nbsp;mil</p><p class="kpi-l">Geração de valor líquido</p></div>
+        </div>
+        <div class="fin-chart reveal" aria-label="Comparação de custo e ganho acumulados em 48 meses">
+          <div class="bar-row">
+            <span class="bar-label">Ganho acumulado</span>
+            <div class="bar bar-gain"><i style="--w:100%">R$ 808 mil</i></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Custo acumulado</span>
+            <div class="bar bar-cost"><i style="--w:85%">R$ 688 mil</i></div>
+          </div>
+          <p class="fin-note">Economia de R$&nbsp;16.833/mês cobre parcelas de ~R$&nbsp;8.208 do
+            <strong>BNDES Finame 4.0</strong> (8,5% a.a.) — viabilidade financeira comprovada.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6 — ENCERRAMENTO -->
+    <section class="slide slide-cover slide-end" data-index="6" id="slide-6">
+      <div class="end-inner">
+        <svg class="logo-mark big reveal" viewBox="-6 -2 138 160" preserveAspectRatio="xMidYMid meet" aria-label="Símbolo NexBloc"><use href="#iso-n"/></svg>
+        <blockquote class="reveal">“Conexão sólida não é sorte.<br/>É <em>engenharia</em>.”</blockquote>
+        <p class="reveal thanks">Obrigado! — Equipe NexBloc · Firjan SENAI Maracanã</p>
+        <p class="reveal contact">contato@nexbloc.com.br · nexbloc.com.br</p>
+        <button class="cta ghost reveal" data-goto="0">Rever a torre
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6 5 12l6 6"/></svg>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== HUD / CONTROLES ===================== -->
+  <div class="hud">
+    <div class="progress"><i id="progressBar"></i></div>
+    <div class="hud-right">
+      <span class="counter"><b id="curNum">00</b> / <span id="totNum">06</span></span>
+      <button class="nav-btn" id="btnPrev" aria-label="Slide anterior">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button class="nav-btn" id="btnNext" aria-label="Próximo slide">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+      <button class="nav-btn play" id="btnPlay" aria-label="Apresentação automática">
+        <svg id="icoPlay" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5-13-7.5Z"/></svg>
+        <svg id="icoPause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" hidden><path d="M6.5 4.5h4v15h-4zM13.5 4.5h4v15h-4z"/></svg>
+      </button>
+      <button class="nav-btn" id="btnFull" aria-label="Tela cheia">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <p class="hint" id="hint">Use ← → , clique na torre ou role para navegar</p>
+
+  <!-- ===================== SPRITE SVG — BLOCOS ISOMÉTRICOS ===================== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="cube-n" viewBox="0 0 100 116"><use href="#iso-cube"/></symbol>
+      <!-- cubo isométrico: topo ciano, face esq. azul-abissal, face dir. azul conexão -->
+      <symbol id="iso-cube" viewBox="0 0 100 116">
+        <polygon points="50,0 100,29 50,58 0,29"   fill="#00C7D7"/>
+        <polygon points="0,29 50,58 50,116 0,87"   fill="#011C4B"/>
+        <polygon points="100,29 100,87 50,116 50,58" fill="#005DBA"/>
+        <polyline points="0,29 50,58 100,29" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+        <line x1="50" y1="58" x2="50" y2="116" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+      </symbol>
+      <!-- símbolo N: duas torres de 3 blocos + diagonal ascendente
+           viewBox ajustado ao bounding box real da arte (incl. a diagonal que
+           ultrapassa as colunas) — enquadramento justo, sem cortes nem folga -->
+      <symbol id="iso-n" viewBox="-6 -2 138 160">
+        <use href="#cube-n" x="0"  y="92" width="52" height="60"/>
+        <use href="#cube-n" x="0"  y="48" width="52" height="60"/>
+        <use href="#cube-n" x="0"  y="4"  width="52" height="60"/>
+        <use href="#cube-n" x="74" y="92" width="52" height="60"/>
+        <use href="#cube-n" x="74" y="48" width="52" height="60"/>
+        <use href="#cube-n" x="74" y="4"  width="52" height="60"/>
+        <polygon points="24,118 46,128 98,44 76,34" fill="#00C7D7" opacity=".95"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
