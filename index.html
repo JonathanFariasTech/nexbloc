@@ -82,9 +82,9 @@
         <button class="tab is-active" role="tab" aria-selected="true" data-tab="empresa">A empresa</button>
         <button class="tab" role="tab" aria-selected="false" data-tab="canvas">Canvas de negócio</button>
       </div>
-      <div class="cols">
+      <!-- PAINEL 1 · A EMPRESA -->
+      <div class="tab-panel cols" data-panel="empresa" id="panel-empresa">
         <div class="col card-col">
-        <div class="tab-panel" data-panel="empresa">
 
           <article class="card reveal">
             <h3>Objetivo</h3>
@@ -103,11 +103,31 @@
             <p>Entrega modular e auditável: cada bloco é testado, documentado e somado à operação —
               sem paradas e sem surpresas no caminho.</p>
           </article>
-        </div>
-        <div class="tab-panel" data-panel="canvas" hidden>
-          <p class="bmc-caption reveal">O modelo de negócio, bloco a bloco — Business Model Canvas (9 blocos) da
-            implantação IIoT nos centros de distribuição: do problema ao valor gerado.</p>
-          <div class="bmc-grid">
+        </div><!-- /.col.card-col -->
+
+        <div class="col team-col reveal">
+          <h3 class="team-title">Integrantes</h3>
+          <!-- Fotos: basta colocar o arquivo em assets/team/ com o nome indicado em data-photo.
+               Enquanto o arquivo não existir, o placeholder (silhueta + iniciais) é mantido. -->
+          <ul class="team-grid">
+            <li class="member"><span class="avatar" data-photo="assets/team/debora.jpeg" role="img" aria-label="Foto de Debora Cristina Gomes Ribeiro (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">DC</span></span><span class="member-name">Debora Cristina Gomes Ribeiro</span></li>
+            <li class="member"><span class="avatar" data-photo="assets/team/gabriel.jpeg" role="img" aria-label="Foto de Gabriel Washington Coelho da Silva (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">GW</span></span><span class="member-name">Gabriel Washington Coelho da Silva</span></li>
+            <li class="member"><span class="avatar" data-photo="assets/team/jonathan.jpg" role="img" aria-label="Foto de Jonathan Farias de Melo (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">JF</span></span><span class="member-name">Jonathan Farias de Melo</span></li>
+            <li class="member"><span class="avatar" data-photo="assets/team/lucas.jpeg" role="img" aria-label="Foto de Lucas Gabriel dos Santos Bernardes (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">LG</span></span><span class="member-name">Lucas Gabriel dos Santos Bernardes</span></li>
+            <li class="member"><span class="avatar" data-photo="assets/team/natan.jpeg" role="img" aria-label="Foto de Natan dos Santos Agostine (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">NS</span></span><span class="member-name">Natan dos Santos Agostine</span></li>
+          </ul>
+          <p class="team-note">As fotos dos integrantes aparecem aqui — basta colocar as imagens em <code>assets/team/</code>.</p>
+          <div class="values">
+            <span>Solidez técnica</span><span>Modularidade</span><span>Inovação contínua</span><span>Transparência</span>
+          </div>
+        </div><!-- /.col.team-col -->
+      </div><!-- /tab-panel empresa -->
+
+      <!-- PAINEL 2 · CANVAS DE NEGÓCIO (largura total, fora das colunas) -->
+      <div class="tab-panel" data-panel="canvas" id="panel-canvas" hidden>
+        <p class="bmc-caption reveal">O modelo de negócio, bloco a bloco — Business Model Canvas (9 blocos) da
+          implantação IIoT nos centros de distribuição: do problema ao valor gerado.</p>
+        <div class="bmc-grid">
 
         <div class="bmc-cell bmc-parceiros reveal">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg>Parceiros-chave</h3>
@@ -198,27 +218,8 @@
           <span>bloco a bloco</span>
         </div>
 
-        </div>
-    
-        </div>
-      </div>
-<div class="col team-col reveal">
-          <h3 class="team-title">Integrantes</h3>
-          <!-- Fotos: basta colocar o arquivo em assets/team/ com o nome indicado em data-photo.
-               Enquanto o arquivo não existir, o placeholder (silhueta + iniciais) é mantido. -->
-          <ul class="team-grid">
-            <li class="member"><span class="avatar" data-photo="assets/team/debora.jpeg" role="img" aria-label="Foto de Debora Cristina Gomes Ribeiro (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">DC</span></span><span class="member-name">Debora Cristina Gomes Ribeiro</span></li>
-            <li class="member"><span class="avatar" data-photo="assets/team/gabriel.jpeg" role="img" aria-label="Foto de Gabriel Washington Coelho da Silva (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">GW</span></span><span class="member-name">Gabriel Washington Coelho da Silva</span></li>
-            <li class="member"><span class="avatar" data-photo="assets/team/jonathan.jpg" role="img" aria-label="Foto de Jonathan Farias de Melo (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">JF</span></span><span class="member-name">Jonathan Farias de Melo</span></li>
-            <li class="member"><span class="avatar" data-photo="assets/team/lucas.jpeg" role="img" aria-label="Foto de Lucas Gabriel dos Santos Bernardes (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">LG</span></span><span class="member-name">Lucas Gabriel dos Santos Bernardes</span></li>
-            <li class="member"><span class="avatar" data-photo="assets/team/natan.jpeg" role="img" aria-label="Foto de Natan dos Santos Agostine (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">NS</span></span><span class="member-name">Natan dos Santos Agostine</span></li>
-          </ul>
-          <p class="team-note">As fotos dos integrantes aparecem aqui — basta colocar as imagens em <code>assets/team/</code>.</p>
-          <div class="values">
-            <span>Solidez técnica</span><span>Modularidade</span><span>Inovação contínua</span><span>Transparência</span>
-          </div>
-        </div>
-      </div>
+        </div><!-- /.bmc-grid -->
+      </div><!-- /tab-panel canvas -->
     </section>
 
     <!-- SLIDE 2 — INFRA -->
