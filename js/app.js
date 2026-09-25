@@ -35,23 +35,23 @@
     });
   });
 
-  /* ---- fotos dos integrantes: carrega data-photo só se o arquivo existir
-        (evita requests quebrados; placeholders aparecem até a foto ser adicionada) ---- */
-  const setPhoto = av => {
-    av.style.setProperty('--photo', `url("${av.dataset.photo}")`);
-    av.classList.add('has-photo');
-  };
-  /* Pré-carrega as fotos via fetch (respostas de rede não sujam o console).
-     Se o arquivo ainda não existir, o placeholder é mantido. */
-  const tryLoad = src => new Promise(res => {
-    const ctl = 'AbortController' in window ? new AbortController() : null;
-    const timer = setTimeout(() => { ctl?.abort(); res(false); }, 5000);
-    fetch(src, ctl ? { signal: ctl.signal } : {})
-      .then(r => { clearTimeout(timer); res(r.ok); })
-      .catch(() => { clearTimeout(timer); res(false); });
-  });
+  /* ---- fotos dos integrantes: usa <img> direto com data-photo.
+        Se o arquivo existir, a foto aparece; se falhar (404/CORS/protocolo
+        file://), o onerror mantém o placeholder elegante — sem tela quebrada. ---- */
   document.querySelectorAll('.avatar[data-photo]').forEach(av => {
-    tryLoad(av.dataset.photo).then(ok => { if (ok) setPhoto(av); });
+    const img = document.createElement('img');
+    img.className = 'avatar-photo';
+    img.alt = '';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.addEventListener('load', () => av.classList.add('has-photo'));
+    img.addEventListener('error', () => {
+      // fallback silencioso: remove o <img>, mantém placeholder
+      img.remove();
+      av.classList.remove('has-photo');
+    });
+    img.src = av.dataset.photo;
+    av.appendChild(img);
   });
 
   /* ---- sparkline do slide de monitoramento (dados fake plausíveis) ---- */
