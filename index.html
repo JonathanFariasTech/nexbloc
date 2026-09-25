@@ -17,11 +17,12 @@
   <nav class="tower-nav" id="towerNav" aria-label="Torre de blocos — setores da implantação">
     <div class="tower" id="towerMini">
       <svg viewBox="0 0 120 320" aria-hidden="true">
-        <g class="mini-block" data-slide="5"><use href="#iso-cube" x="34" y="14" width="52" height="60"/></g>
-        <g class="mini-block" data-slide="4"><use href="#iso-cube" x="34" y="72" width="52" height="60"/></g>
-        <g class="mini-block" data-slide="3"><use href="#iso-cube" x="34" y="130" width="52" height="60"/></g>
-        <g class="mini-block" data-slide="2"><use href="#iso-cube" x="34" y="188" width="52" height="60"/></g>
-        <g class="mini-block" data-slide="1"><use href="#iso-cube" x="34" y="246" width="52" height="60"/></g>
+        <symbol id="cube-m" viewBox="0 0 100 116"><use href="#iso-cube"/></symbol>
+        <g class="mini-block" data-slide="5"><use href="#cube-m" x="34" y="14" width="52" height="60"/></g>
+        <g class="mini-block" data-slide="4"><use href="#cube-m" x="34" y="72" width="52" height="60"/></g>
+        <g class="mini-block" data-slide="3"><use href="#cube-m" x="34" y="130" width="52" height="60"/></g>
+        <g class="mini-block" data-slide="2"><use href="#cube-m" x="34" y="188" width="52" height="60"/></g>
+        <g class="mini-block" data-slide="1"><use href="#cube-m" x="34" y="246" width="52" height="60"/></g>
       </svg>
     </div>
     <ul class="tower-list">
@@ -42,7 +43,7 @@
         <div class="cover-copy">
           <p class="eyebrow reveal">Firjan SENAI Maracanã · Projeto Integrador · Técnico em Redes de Computadores</p>
           <div class="logo-lockup reveal">
-            <svg class="logo-mark" viewBox="0 0 120 150" aria-label="Símbolo NexBloc"><use href="#iso-n" x="0" y="0"/></svg>
+            <svg class="logo-mark" viewBox="-6 -2 138 160" preserveAspectRatio="xMidYMid meet" aria-label="Símbolo NexBloc"><use href="#iso-n"/></svg>
             <div>
               <h1 class="brand-name">Nex<span>Bloc</span></h1>
               <p class="brand-slogan">Seu negócio conectado, bloco&nbsp;a&nbsp;bloco.</p>
@@ -57,11 +58,12 @@
         </div>
         <div class="cover-tower" aria-hidden="true">
           <svg viewBox="0 0 340 560" class="tower-hero" id="towerHero">
-            <use href="#iso-cube" class="hero-cube hc-5" x="95"  y="20"  width="150" height="174"/>
-            <use href="#iso-cube" class="hero-cube hc-4" x="95"  y="126" width="150" height="174"/>
-            <use href="#iso-cube" class="hero-cube hc-3" x="95"  y="232" width="150" height="174"/>
-            <use href="#iso-cube" class="hero-cube hc-2" x="95"  y="338" width="150" height="174"/>
-            <use href="#iso-cube" class="hero-cube hc-1" x="95"  y="444" width="150" height="174"/>
+            <symbol id="cube-h" viewBox="0 0 100 116"><use href="#iso-cube"/></symbol>
+            <g class="hero-cube hc-5"><use href="#cube-h" x="95"  y="20"  width="150" height="174"/></g>
+            <g class="hero-cube hc-4"><use href="#cube-h" x="95"  y="126" width="150" height="174"/></g>
+            <g class="hero-cube hc-3"><use href="#cube-h" x="95"  y="232" width="150" height="174"/></g>
+            <g class="hero-cube hc-2"><use href="#cube-h" x="95"  y="338" width="150" height="174"/></g>
+            <g class="hero-cube hc-1"><use href="#cube-h" x="95"  y="444" width="150" height="174"/></g>
           </svg>
         </div>
       </div>
@@ -97,14 +99,16 @@
         </div>
         <div class="col team-col reveal">
           <h3 class="team-title">Integrantes</h3>
-          <ul class="team">
-            <li><span class="avatar">DC</span>Debora Cristina Gomes Ribeiro</li>
-            <li><span class="avatar">GW</span>Gabriel Washington Coelho da Silva</li>
-            <li><span class="avatar">JF</span>Jonathan Farias de Melo</li>
-            <li><span class="avatar">LG</span>Lucas Gabriel dos Santos Bernardes</li>
-            <li><span class="avatar">NS</span>Natan dos Santos Agostine</li>
-            <li><span class="avatar">EN</span>Ebenézer Nepomuceno</li>
+          <!-- Fotos: basta colocar o arquivo em assets/team/ com o nome indicado em data-photo.
+               Enquanto o arquivo não existir, o placeholder (silhueta + iniciais) é mantido. -->
+          <ul class="team-grid">
+            <li class="member"><span class="avatar" data-photo="assets/team/debora.jpg" role="img" aria-label="Foto de Debora Cristina Gomes Ribeiro (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">DC</span></span><span class="member-name">Debora Cristina Gomes Ribeiro</span></li>
+            <li class="member"><span class="avatar" data-photo="assets/team/gabriel.jpg" role="img" aria-label="Foto de Gabriel Washington Coelho da Silva (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">GW</span></span><span class="member-name">Gabriel Washington Coelho da Silva</span></li>
+            <li class="member"><span class="avatar" data-photo="assets/team/jonathan.jpg" role="img" aria-label="Foto de Jonathan Farias de Melo (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">JF</span></span><span class="member-name">Jonathan Farias de Melo</span></li>
+            <li class="member"><span class="avatar" data-photo="assets/team/lucas.jpg" role="img" aria-label="Foto de Lucas Gabriel dos Santos Bernardes (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">LG</span></span><span class="member-name">Lucas Gabriel dos Santos Bernardes</span></li>
+            <li class="member"><span class="avatar" data-photo="assets/team/natan.jpg" role="img" aria-label="Foto de Natan dos Santos Agostine (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">NS</span></span><span class="member-name">Natan dos Santos Agostine</span></li>
           </ul>
+          <p class="team-note">As fotos dos integrantes aparecem aqui — basta colocar as imagens em <code>assets/team/</code>.</p>
           <div class="values">
             <span>Solidez técnica</span><span>Modularidade</span><span>Inovação contínua</span><span>Transparência</span>
           </div>
@@ -273,7 +277,7 @@
     <!-- SLIDE 6 — ENCERRAMENTO -->
     <section class="slide slide-cover slide-end" data-index="6" id="slide-6">
       <div class="end-inner">
-        <svg class="logo-mark big reveal" viewBox="0 0 120 150" aria-label="Símbolo NexBloc"><use href="#iso-n"/></svg>
+        <svg class="logo-mark big reveal" viewBox="-6 -2 138 160" preserveAspectRatio="xMidYMid meet" aria-label="Símbolo NexBloc"><use href="#iso-n"/></svg>
         <blockquote class="reveal">“Conexão sólida não é sorte.<br/>É <em>engenharia</em>.”</blockquote>
         <p class="reveal thanks">Obrigado! — Equipe NexBloc · Firjan SENAI Maracanã</p>
         <p class="reveal contact">contato@nexbloc.com.br · nexbloc.com.br</p>
@@ -310,6 +314,7 @@
   <!-- ===================== SPRITE SVG — BLOCOS ISOMÉTRICOS ===================== -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
+      <symbol id="cube-n" viewBox="0 0 100 116"><use href="#iso-cube"/></symbol>
       <!-- cubo isométrico: topo ciano, face esq. azul-abissal, face dir. azul conexão -->
       <symbol id="iso-cube" viewBox="0 0 100 116">
         <polygon points="50,0 100,29 50,58 0,29"   fill="#00C7D7"/>
@@ -318,14 +323,16 @@
         <polyline points="0,29 50,58 100,29" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
         <line x1="50" y1="58" x2="50" y2="116" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
       </symbol>
-      <!-- símbolo N: duas torres de 3 blocos + diagonal ascendente -->
-      <symbol id="iso-n" viewBox="0 0 120 150">
-        <g transform="translate(0,92) scale(.52)"><use href="#iso-cube" x="0" y="0"/></g>
-        <g transform="translate(0,48) scale(.52)"><use href="#iso-cube" x="0" y="0"/></g>
-        <g transform="translate(0,4)  scale(.52)"><use href="#iso-cube" x="0" y="0"/></g>
-        <g transform="translate(74,92) scale(.52)"><use href="#iso-cube" x="0" y="0"/></g>
-        <g transform="translate(74,48) scale(.52)"><use href="#iso-cube" x="0" y="0"/></g>
-        <g transform="translate(74,4)  scale(.52)"><use href="#iso-cube" x="0" y="0"/></g>
+      <!-- símbolo N: duas torres de 3 blocos + diagonal ascendente
+           viewBox ajustado ao bounding box real da arte (incl. a diagonal que
+           ultrapassa as colunas) — enquadramento justo, sem cortes nem folga -->
+      <symbol id="iso-n" viewBox="-6 -2 138 160">
+        <use href="#cube-n" x="0"  y="92" width="52" height="60"/>
+        <use href="#cube-n" x="0"  y="48" width="52" height="60"/>
+        <use href="#cube-n" x="0"  y="4"  width="52" height="60"/>
+        <use href="#cube-n" x="74" y="92" width="52" height="60"/>
+        <use href="#cube-n" x="74" y="48" width="52" height="60"/>
+        <use href="#cube-n" x="74" y="4"  width="52" height="60"/>
         <polygon points="24,118 46,128 98,44 76,34" fill="#00C7D7" opacity=".95"/>
       </symbol>
     </defs>

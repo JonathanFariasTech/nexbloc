@@ -35,6 +35,25 @@
     });
   });
 
+  /* ---- fotos dos integrantes: carrega data-photo só se o arquivo existir
+        (evita requests quebrados; placeholders aparecem até a foto ser adicionada) ---- */
+  const setPhoto = av => {
+    av.style.setProperty('--photo', `url("${av.dataset.photo}")`);
+    av.classList.add('has-photo');
+  };
+  /* Pré-carrega as fotos via fetch (respostas de rede não sujam o console).
+     Se o arquivo ainda não existir, o placeholder é mantido. */
+  const tryLoad = src => new Promise(res => {
+    const ctl = 'AbortController' in window ? new AbortController() : null;
+    const timer = setTimeout(() => { ctl?.abort(); res(false); }, 5000);
+    fetch(src, ctl ? { signal: ctl.signal } : {})
+      .then(r => { clearTimeout(timer); res(r.ok); })
+      .catch(() => { clearTimeout(timer); res(false); });
+  });
+  document.querySelectorAll('.avatar[data-photo]').forEach(av => {
+    tryLoad(av.dataset.photo).then(ok => { if (ok) setPhoto(av); });
+  });
+
   /* ---- sparkline do slide de monitoramento (dados fake plausíveis) ---- */
   const spark = document.getElementById('sparkLine');
   if (spark) {
@@ -128,8 +147,13 @@
 
   /* teclado */
   window.addEventListener('keydown', e => {
+    const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || '');
+    const nativeBtn = document.activeElement?.closest?.('button');
     switch (e.key) {
-      case 'ArrowRight': case 'PageDown': case ' ': case 'Enter':
+      case 'ArrowRight': case 'PageDown':
+        e.preventDefault(); stopAutoplay(); next(); break;
+      case ' ': case 'Enter':
+        if (typing || nativeBtn) break; // deixa o botão focado agir naturalmente
         e.preventDefault(); stopAutoplay(); next(); break;
       case 'ArrowLeft': case 'PageUp':
         e.preventDefault(); stopAutoplay(); prev(); break;
@@ -144,7 +168,9 @@
   /* roda de mouse (com trava) */
   let wheelTimer = null;
   window.addEventListener('wheel', e => {
-    if (locked || Math.abs(e.deltaY) < 24) return;
+    if (e.deltaMode === 1 && Math.abs(e.deltaY) < 1) return; // linha
+    if (e.deltaMode !== 1 && Math.abs(e.deltaY) < 24) return; // pixel
+    if (locked) return;
     const slideEl = slides[current];
     const canScroll = slideEl.scrollHeight > slideEl.clientHeight + 4;
     if (canScroll) {
