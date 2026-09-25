@@ -288,7 +288,7 @@ button { font-family: inherit; cursor: pointer; }
 .bmc-caption { font-size: .85rem; line-height: 1.6; color: rgba(255,255,255,.75); margin-bottom: 14px; max-width: 68ch; }
 
 .bmc-grid {
-  display: grid; grid-template-columns: repeat(10, 1fr); grid-template-rows: repeat(4, auto);
+  display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); grid-template-rows: repeat(4, auto);
   gap: clamp(6px, .7vw, 11px); width: 100%;
 }
 .bmc-grid > div { min-height: 0; }
@@ -305,6 +305,9 @@ button { font-family: inherit; cursor: pointer; }
   text-transform: uppercase; color: var(--azul-nexbloc); margin-bottom: 6px; line-height: 1.25;
 }
 .bmc-cell h3 svg { flex: 0 0 16px; width: 16px; height: 16px; color: var(--ciano-bloco); }
+/* célula central: SVG sem dimensões intrínsecas precisa de altura explícita,
+   senão estica a linha do grid e desloca os blocos de custo/receita */
+.bmc-center svg { display: block; width: 44px; height: 51px; }
 .bmc-cell ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
 .bmc-cell ul { flex: 1; }
 .bmc-cell li { position: relative; padding-left: 12px; font-size: clamp(.66rem, .95vh, .74rem); line-height: 1.4; color: var(--grafite); }
