@@ -36,6 +36,25 @@
     });
   });
 
+  /* ---- canvas de negócio: escala própria (painel oculto no carregamento) e
+        entra em fluxo normal quando o slide 1 está ativo; rolagem automática
+        ao abrir a aba para garantir que nada fique "para baixo da dobra" ---- */
+  const panelBmc = document.getElementById('panel-canvas');
+  if (panelBmc) {
+    panelBmc.classList.add('bmc-panel');
+    panelBmc.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.setProperty('--d', String(260 + i * 70));
+    });
+  }
+  function scrollBmcIntoView(smooth) {
+    const s1 = document.getElementById('slide-1');
+    if (!s1 || !panelBmc) return;
+    requestAnimationFrame(() => {
+      const y = Math.max(0, panelBmc.offsetTop - 16);
+      s1.scrollTo({ top: y, behavior: smooth ? 'smooth' : 'auto' });
+    });
+  }
+
   /* ---- fotos dos integrantes: aceita extensões flexíveis (.jpg, .jpeg,
         .png, .webp) e nomes com maiúsculas, acentos ou sufixos.
         Ex.: data-photo="assets/team/jonathan.jpg" encontra também
@@ -209,6 +228,7 @@
     /* reescala as animações .reveal do painel recém-mostrado */
     const panel = slide.querySelector(`.tab-panel[data-panel="${name}"]`);
     if (panel) panel.querySelectorAll('.reveal').forEach((el, i) => el.style.setProperty('--d', String(120 + i * 90)));
+    if (name === 'canvas') scrollBmcIntoView(true); // garante o topo do canvas visível na dobra
     refreshBmcLink();
   }
   document.querySelectorAll('.tab').forEach(t =>
@@ -221,6 +241,7 @@
       stopAutoplay();
       if (el.dataset.tabTarget) setTab(el.dataset.tabTarget); // ex.: "Canvas de negócio" na torre
       goTo(+el.dataset.goto);
+      if (el.dataset.tabTarget === 'canvas') setTimeout(() => scrollBmcIntoView(false), 650);
     })
   );
   miniBlks.forEach(el =>
