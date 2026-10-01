@@ -31,7 +31,7 @@
       <li><button class="tower-link" data-goto="3"><span class="tn-num">03</span> Monitoramento</button></li>
       <li><button class="tower-link" data-goto="4"><span class="tn-num">04</span> Cybersegurança</button></li>
       <li><button class="tower-link" data-goto="5"><span class="tn-num">05</span> Financeiro</button></li>
-      <li><button class="tower-link bmc-link" data-goto="6"><span class="tn-num">＋</span> Canvas de negócio</button></li>
+      <li><button class="tower-link bmc-link" data-goto="1" data-tab-target="canvas"><span class="tn-num">＋</span> Canvas de negócio</button></li>
     </ul>
   </nav>
 
@@ -73,11 +73,16 @@
     <!-- SLIDE 1 — APRESENTAÇÃO DA EMPRESA -->
     <section class="slide slide-dark" data-index="1" id="slide-1">
       <header class="slide-head">
-        <p class="kicker reveal">Bloco 01 · Apresentação da empresa</p>
+        <p class="kicker reveal">Bloco 01 · Apresentação da empresa · Canvas de negócio</p>
         <h2 class="reveal">Construímos a base do seu negócio</h2>
         <p class="lead reveal">A NexBloc atua em infraestrutura e conectividade: módulos sólidos que se empilham
           para erguer algo maior. Nex de nexo e <em>next</em>; Bloc de blocos — crescimento estruturado, sem improvisar.</p>
       </header>
+      <nav class="tabbar reveal" role="tablist" aria-label="Apresentação e canvas de negócio">
+        <button class="tab is-active" role="tab" data-tab="empresa" aria-selected="true">A empresa</button>
+        <button class="tab" role="tab" data-tab="canvas" aria-selected="false">Canvas de negócio</button>
+      </nav>
+            <div class="tab-panel" data-panel="empresa">
       <div class="cols">
         <div class="col card-col">
           <article class="card reveal">
@@ -114,6 +119,101 @@
             <span>Solidez técnica</span><span>Modularidade</span><span>Inovação contínua</span><span>Transparência</span>
           </div>
         </div>
+      </div>
+            </div>
+      <div class="tab-panel bmc-panel" data-panel="canvas" id="panel-canvas" hidden>
+        <div class="bmc-grid">
+
+        <div class="bmc-cell bmc-parceiros reveal">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg>Parceiros-chave</h3>
+          <ul>
+            <li>Fabricantes de switches, APs e sensores</li>
+            <li>FreeRADIUS / MQTT Mosquitto (open source)</li>
+            <li>BNDES Finame 4.0 — financiamento do projeto</li>
+          </ul>
+        </div>
+
+        <div class="bmc-cell bmc-atividades reveal">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3 3.7-3.7Z"/></svg>Atividades-chave</h3>
+          <ul>
+            <li>Segmentação de redes com prioridade para alarmes</li>
+            <li>Equipamentos blindados e acesso por certificado</li>
+            <li>Testes de estresse e certificação ponto a ponto</li>
+          </ul>
+        </div>
+
+        <div class="bmc-cell bmc-recursos reveal">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8M1 3h22v5H1zM10 12h4"/></svg>Recursos-chave</h3>
+          <ul>
+            <li>Backbone Cat6A + fibra 10 GbE e PoE++</li>
+            <li>Wi-Fi 6/6E industrial e gateways MQTT</li>
+            <li>Stack aberto: Zabbix · Grafana · FreeRADIUS</li>
+            <li>Equipe técnica certificada</li>
+          </ul>
+        </div>
+
+        <div class="bmc-cell bmc-proposta reveal">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></svg>Proposta de valor</h3>
+          <ul>
+            <li>Ecossistema de armazenagem inteligente</li>
+            <li>Telemetria crítica com latência &lt; 25 ms</li>
+            <li>Zero senha compartilhada: identidade por dispositivo</li>
+            <li>Economia anual de R$ 202 mil com payback de 37 meses</li>
+          </ul>
+        </div>
+
+        <div class="bmc-cell bmc-relacionamento reveal">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8.5 3v5.5c0 4.7-3.6 7.9-8.5 9.5-4.9-1.6-8.5-4.8-8.5-9.5V6L12 3Z"/><path d="m9 11.5 2.2 2.2L15.5 9"/></svg>Relacionamento</h3>
+          <ul>
+            <li>Implantação modular, testada bloco a bloco</li>
+            <li>Documentação viva e nomenclatura padrão</li>
+            <li>Suporte contínuo + capacitação da equipe do cliente</li>
+          </ul>
+        </div>
+
+        <div class="bmc-cell bmc-canais reveal">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 21 3l-8 18-2-7-8-3Z"/></svg>Canais</h3>
+          <ul>
+            <li>Venda direta B2B e consultoria técnica</li>
+            <li>Parcerias com integradores certificados</li>
+            <li>Projetos-piloto em um CD âncora</li>
+          </ul>
+        </div>
+
+        <div class="bmc-cell bmc-segmentos reveal">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M17 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 20v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Segmentos de clientes</h3>
+          <ul>
+            <li>CDs com cadeia de frio (alimentos e farma)</li>
+            <li>Operadores logísticos 3PL</li>
+            <li>Varejo e indústria com armazenagem própria</li>
+          </ul>
+        </div>
+
+        <div class="bmc-cell bmc-receita reveal">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M2 12h20"/></svg>Fontes de receita</h3>
+          <ul>
+            <li>Projeto de engenharia e implantação (CAPEX)</li>
+            <li>OPEX mensal: monitoramento gerenciado</li>
+            <li>Manutenção, patches e expansão por blocos</li>
+          </ul>
+        </div>
+
+        <div class="bmc-cell bmc-custos reveal">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2v20M17 6.5c0-2-2.2-3-5-3s-5 1.2-5 3.2c0 5 10 2.6 10 7.6 0 2-2.2 3.2-5 3.2s-5-1.2-5-3.2"/></svg>Estrutura de custos</h3>
+          <ul>
+            <li>CAPEX R$ 400 mil · OPEX R$ 6 mil/mês</li>
+            <li>Ciclo de vida de 48 meses</li>
+            <li>PoE elimina 40% da elétrica dedicada</li>
+          </ul>
+        </div>
+
+        <div class="bmc-cell bmc-center reveal">
+          <svg viewBox="0 0 100 116" aria-hidden="true"><use href="#cube-n"/></svg>
+          <p>NexBloc</p>
+          <span>bloco a bloco</span>
+        </div>
+
+      </div>
       </div>
     </section>
 
@@ -275,120 +375,9 @@
       </div>
     </section>
 
-    <!-- SLIDE 6 — CANVAS DE NEGÓCIO -->
-    <section class="slide slide-light" data-index="6" id="slide-6">
-      <header class="slide-head">
-        <p class="kicker reveal">Anexo estratégico · Canvas de Negócio</p>
-        <h2 class="reveal">O modelo de negócio, <em>bloco a bloco</em></h2>
-        <p class="lead reveal">Business Model Canvas (9 blocos) da implantação IIoT nos centros de distribuição —
-          do problema ao valor gerado.</p>
-      </header>
-      <div class="bmc-grid">
 
-        <div class="bmc-cell bmc-parceiros reveal">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg>Parceiros-chave</h3>
-          <ul>
-            <li>Fabricantes de switches, APs e sensores</li>
-            <li>FreeRADIUS / MQTT Mosquitto (open source)</li>
-            <li>BNDES Finame 4.0 — financiamento do projeto</li>
-          </ul>
-        </div>
-
-        <div class="bmc-cell bmc-atividades reveal">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3 3.7-3.7Z"/></svg>Atividades-chave</h3>
-          <ul>
-            <li>Segmentação de redes com prioridade para alarmes</li>
-            <li>Equipamentos blindados e acesso por certificado</li>
-            <li>Testes de estresse e certificação ponto a ponto</li>
-          </ul>
-        </div>
-
-        <div class="bmc-cell bmc-recursos reveal">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8M1 3h22v5H1zM10 12h4"/></svg>Recursos-chave</h3>
-          <ul>
-            <li>Backbone Cat6A + fibra 10 GbE e PoE++</li>
-            <li>Wi-Fi 6/6E industrial e gateways MQTT</li>
-            <li>Stack aberto: Zabbix · Grafana · FreeRADIUS</li>
-            <li>Equipe técnica certificada</li>
-          </ul>
-        </div>
-
-        <div class="bmc-cell bmc-proposta reveal">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></svg>Proposta de valor</h3>
-          <ul>
-            <li>Ecossistema de armazenagem inteligente</li>
-            <li>Telemetria crítica com latência &lt; 25 ms</li>
-            <li>Zero senha compartilhada: identidade por dispositivo</li>
-            <li>Economia anual de R$ 202 mil com payback de 37 meses</li>
-          </ul>
-        </div>
-
-        <div class="bmc-cell bmc-relacionamento reveal">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8.5 3v5.5c0 4.7-3.6 7.9-8.5 9.5-4.9-1.6-8.5-4.8-8.5-9.5V6L12 3Z"/><path d="m9 11.5 2.2 2.2L15.5 9"/></svg>Relacionamento</h3>
-          <ul>
-            <li>Implantação modular, testada bloco a bloco</li>
-            <li>Documentação viva e nomenclatura padrão</li>
-            <li>Suporte contínuo + capacitação da equipe do cliente</li>
-          </ul>
-        </div>
-
-        <div class="bmc-cell bmc-canais reveal">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 21 3l-8 18-2-7-8-3Z"/></svg>Canais</h3>
-          <ul>
-            <li>Venda direta B2B e consultoria técnica</li>
-            <li>Parcerias com integradores certificados</li>
-            <li>Projetos-piloto em um CD âncora</li>
-          </ul>
-        </div>
-
-        <div class="bmc-cell bmc-segmentos reveal">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M17 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 20v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Segmentos de clientes</h3>
-          <ul>
-            <li>CDs com cadeia de frio (alimentos e farma)</li>
-            <li>Operadores logísticos 3PL</li>
-            <li>Varejo e indústria com armazenagem própria</li>
-          </ul>
-        </div>
-
-        <div class="bmc-cell bmc-receita reveal">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M2 12h20"/></svg>Fontes de receita</h3>
-          <ul>
-            <li>Projeto de engenharia e implantação (CAPEX)</li>
-            <li>OPEX mensal: monitoramento gerenciado</li>
-            <li>Manutenção, patches e expansão por blocos</li>
-          </ul>
-        </div>
-
-        <div class="bmc-cell bmc-custos reveal">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2v20M17 6.5c0-2-2.2-3-5-3s-5 1.2-5 3.2c0 5 10 2.6 10 7.6 0 2-2.2 3.2-5 3.2s-5-1.2-5-3.2"/></svg>Estrutura de custos</h3>
-          <ul>
-            <li>CAPEX R$ 400 mil · OPEX R$ 6 mil/mês</li>
-            <li>Ciclo de vida de 48 meses</li>
-            <li>PoE elimina 40% da elétrica dedicada</li>
-          </ul>
-        </div>
-
-        <div class="bmc-cell bmc-center reveal">
-          <svg viewBox="0 0 100 116" aria-hidden="true"><use href="#cube-n"/></svg>
-          <p>NexBloc</p>
-          <span>bloco a bloco</span>
-        </div>
-
-        @@CELL@@
-
-        @@CELL@@
-
-        @@CELL@@
-
-        @@CELL@@
-
-        @@CELL@@
-
-      </div>
-    </section>
-
-    <!-- SLIDE 7 — AGRADECIMENTOS -->
-    <section class="slide slide-navy slide-thanks" data-index="7" id="slide-7">
+    <!-- SLIDE 6 — AGRADECIMENTOS -->
+    <section class="slide slide-navy slide-thanks" data-index="6" id="slide-6">
       <div class="thanks-inner">
         <p class="kicker reveal">Agradecimentos</p>
         <h2 class="reveal">Esta torre não foi construída sozinha.</h2>
@@ -413,8 +402,8 @@
       </div>
     </section>
 
-    <!-- SLIDE 8 — ENCERRAMENTO -->
-    <section class="slide slide-cover slide-end" data-index="8" id="slide-8">
+    <!-- SLIDE 7 — ENCERRAMENTO -->
+    <section class="slide slide-cover slide-end" data-index="7" id="slide-7">
       <div class="end-inner">
         <img class="logo-mark big reveal" src="assets/logo-nexbloc.png" alt="Símbolo NexBloc — letra N isométrica em blocos">
         <blockquote class="reveal">“Conexão sólida não é sorte.<br/>É <em>engenharia</em>.”</blockquote>
