@@ -235,42 +235,43 @@
           <article class="chip-card reveal">
             <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="9" width="18" height="7" rx="1.5"/><path d="M6 16v2M12 16v2M18 16v2M7 12h.01M10 12h.01"/><path d="M8 9V6M16 9V6"/></svg>
             <div><h3>Cabeamento &amp; backbone</h3>
-            <p>Cat6A blindado, certificado ponto a ponto por Fluke Networks, e fibra <strong>10&nbsp;GbE</strong>
-               com uplinks SFP+ — fim do gargalo de switching.</p></div>
+            <p>Cabos de rede de alta performance testados um a um, e fibra óptica de <strong>10 gigabits</strong>
+               como espinha dorsal — fim do gargalo de velocidade.</p></div>
           </article>
           <article class="chip-card reveal">
             <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M13 2 4.5 13.5H11L9.5 22 19 9.5h-6.5L13 2Z"/></svg>
             <div><h3>PoE+ / PoE++</h3>
-            <p>Alimentação elétrica pelos próprios cabos (802.3at/bt): até <strong>90&nbsp;W</strong> por porta e
-               <strong>-40%</strong> em custos de infraestrutura elétrica.</p></div>
+            <p>Os equipamentos recebem energia pelo próprio cabo de rede — sem fiação elétrica extra:
+               até <strong>90&nbsp;W</strong> por tomada e <strong>-40%</strong> no custo de obra elétrica.</p></div>
           </article>
           <article class="chip-card reveal">
             <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1.2" fill="currentColor"/></svg>
             <div><h3>Wi-Fi 6/6E industrial</h3>
-            <p>OFDMA, BSS Coloring e TWT para vencer a “gaiola de Faraday” dos galpões — bateria de sensor com
-               vida útil de até <strong>5 anos</strong>.</p></div>
+            <p>Sinal estável mesmo em galpões metálicos cheios de interferência — sensores sem fio com
+               bateria que dura até <strong>5 anos</strong>.</p></div>
           </article>
           <article class="chip-card reveal">
             <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="8" cy="7" r="1.6" fill="currentColor"/><circle cx="14" cy="12" r="1.6" fill="currentColor"/><circle cx="10" cy="17" r="1.6" fill="currentColor"/></svg>
-            <div><h3>Segmentação &amp; QoS</h3>
-            <p><strong>6 VLANs</strong> isoladas por perfil + Dual-Stack IPv4/IPv6. Alarmes críticos em DSCP&nbsp;EF
-               com fila LLQ: telemetria nunca disputa banda com vídeo.</p></div>
+            <div><h3>Segmentação &amp; prioridade</h3>
+            <p><strong>6 redes lógicas separadas</strong> por tipo de uso, com prioridade para alarmes críticos:
+               os dados dos sensores nunca disputam espaço com as câmeras.</p></div>
           </article>
         </div>
-        <aside class="col vlan-panel reveal" aria-label="Matriz de VLANs">
+        <aside class="col vlan-panel reveal" aria-label="Matriz de segmentação">
           <h3>Matriz de segmentação</h3>
           <table class="vlan-table">
-            <thead><tr><th>VLAN</th><th>Rede</th><th>Isolamento</th></tr></thead>
+            <thead><tr><th>VLAN</th><th>Rede</th></tr></thead>
             <tbody>
-              <tr><td>10</td><td>Sensores IIoT</td><td>só broker MQTT :8883</td></tr>
-              <tr><td>20</td><td>CFTV / Câmeras</td><td>só NVR / storage</td></tr>
-              <tr><td>30</td><td>Gestão e TI</td><td>SSHv2 · SNMPv3 · RADIUS</td></tr>
-              <tr><td>40</td><td>Corporativo</td><td>ERP / WMS / internet</td></tr>
-              <tr><td>50</td><td>Visitantes</td><td>web isolada</td></tr>
-              <tr><td>99</td><td>Quarentena</td><td>tudo bloqueado</td></tr>
+              <tr><td>10</td><td>Sensores IIoT</td></tr>
+              <tr><td>20</td><td>CFTV / Câmeras</td></tr>
+              <tr><td>30</td><td>Gestão e TI</td></tr>
+              <tr><td>40</td><td>Corporativo</td></tr>
+              <tr><td>50</td><td>Visitantes</td></tr>
+              <tr><td>99</td><td>Quarentena</td></tr>
             </tbody>
           </table>
-          <p class="note">MQTT sobre TLS 1.3 substitui o HTTP polling: menos overhead, alertas em micro-mensagens.</p>
+          <p class="note">Cada rede tem seu próprio "corredor" exclusivo: se uma área trava ou é atacada,
+            as outras continuam funcionando normalmente.</p>
         </aside>
       </div>
     </section>
