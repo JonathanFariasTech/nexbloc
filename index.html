@@ -31,7 +31,7 @@
       <li><button class="tower-link" data-goto="3"><span class="tn-num">03</span> Monitoramento</button></li>
       <li><button class="tower-link" data-goto="4"><span class="tn-num">04</span> Cybersegurança</button></li>
       <li><button class="tower-link" data-goto="5"><span class="tn-num">05</span> Financeiro</button></li>
-      <li><button class="tower-link bmc-link" data-goto="1" data-tab-target="canvas"><span class="tn-num">＋</span> Canvas de negócio</button></li>
+      <li><button class="tower-link bmc-link" data-goto="6"><span class="tn-num">＋</span> Canvas de negócio</button></li>
     </ul>
   </nav>
 
@@ -78,14 +78,8 @@
         <p class="lead reveal">A NexBloc atua em infraestrutura e conectividade: módulos sólidos que se empilham
           para erguer algo maior. Nex de nexo e <em>next</em>; Bloc de blocos — crescimento estruturado, sem improvisar.</p>
       </header>
-      <div class="tabbar reveal" role="tablist" aria-label="Blocos da apresentação da empresa">
-        <button class="tab is-active" role="tab" aria-selected="true" data-tab="empresa">A empresa</button>
-        <button class="tab" role="tab" aria-selected="false" data-tab="canvas">Canvas de negócio</button>
-      </div>
-      <!-- PAINEL 1 · A EMPRESA -->
-      <div class="tab-panel cols" data-panel="empresa" id="panel-empresa">
+      <div class="cols">
         <div class="col card-col">
-
           <article class="card reveal">
             <h3>Objetivo</h3>
             <p>Transformar os centros de distribuição convencionais em <strong>ecossistemas de armazenagem
@@ -103,8 +97,7 @@
             <p>Entrega modular e auditável: cada bloco é testado, documentado e somado à operação —
               sem paradas e sem surpresas no caminho.</p>
           </article>
-        </div><!-- /.col.card-col -->
-
+        </div>
         <div class="col team-col reveal">
           <h3 class="team-title">Integrantes</h3>
           <!-- Fotos: basta colocar o arquivo em assets/team/ com o nome indicado em data-photo.
@@ -120,14 +113,177 @@
           <div class="values">
             <span>Solidez técnica</span><span>Modularidade</span><span>Inovação contínua</span><span>Transparência</span>
           </div>
-        </div><!-- /.col.team-col -->
-      </div><!-- /tab-panel empresa -->
+        </div>
+      </div>
+    </section>
 
-      <!-- PAINEL 2 · CANVAS DE NEGÓCIO (largura total, fora das colunas) -->
-      <div class="tab-panel" data-panel="canvas" id="panel-canvas" hidden>
-        <p class="bmc-caption reveal">O modelo de negócio, bloco a bloco — Business Model Canvas (9 blocos) da
-          implantação IIoT nos centros de distribuição: do problema ao valor gerado.</p>
-        <div class="bmc-grid">
+    <!-- SLIDE 2 — INFRA -->
+    <section class="slide slide-light" data-index="2" id="slide-2">
+      <header class="slide-head">
+        <p class="kicker reveal">Bloco 02 · Infra</p>
+        <h2 class="reveal">Infraestrutura que cresce com você</h2>
+        <p class="lead reveal">A rede da NexBloc é montada em módulos independentes que se integram sem retrabalho —
+          do cabo de cobre à fibra, do switch PoE ao ar industrial.</p>
+      </header>
+      <div class="cols">
+        <div class="col card-col">
+          <article class="chip-card reveal">
+            <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="9" width="18" height="7" rx="1.5"/><path d="M6 16v2M12 16v2M18 16v2M7 12h.01M10 12h.01"/><path d="M8 9V6M16 9V6"/></svg>
+            <div><h3>Cabeamento &amp; backbone</h3>
+            <p>Cabos de rede de alta performance testados um a um, e fibra óptica de <strong>10&nbsp;Gb</strong>
+               como espinha dorsal — fim do gargalo de conexão.</p></div>
+          </article>
+          <article class="chip-card reveal">
+            <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M13 2 4.5 13.5H11L9.5 22 19 9.5h-6.5L13 2Z"/></svg>
+            <div><h3>PoE+ / PoE++</h3>
+            <p>Os equipamentos recebem energia pelo próprio cabo de rede — sem fiação elétrica extra:
+               <strong>-40%</strong> em custos de infraestrutura elétrica.</p></div>
+          </article>
+          <article class="chip-card reveal">
+            <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1.2" fill="currentColor"/></svg>
+            <div><h3>Wi-Fi 6/6E industrial</h3>
+            <p>Sinal estável mesmo em galpões metálicos cheios de interferência — bateria dos sensores com
+               vida útil de até <strong>5 anos</strong>.</p></div>
+          </article>
+          <article class="chip-card reveal">
+            <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="8" cy="7" r="1.6" fill="currentColor"/><circle cx="14" cy="12" r="1.6" fill="currentColor"/><circle cx="10" cy="17" r="1.6" fill="currentColor"/></svg>
+            <div><h3>Segmentação &amp; prioridade</h3>
+            <p><strong>6 redes lógicas</strong> separadas por tipo de uso. Os alarmes críticos têm prioridade máxima:
+               os dados dos sensores nunca disputam espaço com as câmeras.</p></div>
+          </article>
+        </div>
+        <aside class="col vlan-panel reveal" aria-label="Matriz de VLANs">
+          <h3>Matriz de segmentação</h3>
+          <table class="vlan-table">
+            <thead><tr><th>VLAN</th><th>Rede</th></tr></thead>
+            <tbody>
+              <tr><td>10</td><td>Sensores IIoT</td></tr>
+              <tr><td>20</td><td>CFTV / Câmeras</td></tr>
+              <tr><td>30</td><td>Gestão e TI</td></tr>
+              <tr><td>40</td><td>Corporativo</td></tr>
+              <tr><td>50</td><td>Visitantes</td></tr>
+              <tr><td>99</td><td>Quarentena</td></tr>
+            </tbody>
+          </table>
+          <p class="note">Cada rede tem seu próprio "corredor" exclusivo: se uma área trava ou é atacada, as outras continuam funcionando normalmente.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SLIDE 3 — MONITORAMENTO -->
+    <section class="slide slide-dark" data-index="3" id="slide-3">
+      <header class="slide-head">
+        <p class="kicker reveal">Bloco 03 · Monitoramento</p>
+        <h2 class="reveal">O que você não vê, não protege</h2>
+        <p class="lead reveal">Sem monitoramento, a rede opera às cegas. Este bloco dá olhos à infraestrutura:
+          estado, desempenho e tendência — em tempo real.</p>
+      </header>
+      <div class="cols">
+        <div class="col card-col">
+          <article class="card reveal">
+            <h3>Zabbix + Grafana via SNMPv3</h3>
+            <p>Coleta criptografada e inventário automatizado de ativos. Dashboards por VLAN mostram temperatura
+              da cadeia de frio, disponibilidade de links e carga dos switches PoE.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Latência crítica &lt; 25 ms</h3>
+            <p>Alertas de telemetria priorizados de ponta a ponta. Um atraso significa produto perecível perdido —
+              monitorar é estancar perda.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Testes de estresse</h3>
+            <p>Antes da entrega, colocamos a rede no limite: simulamos milhares de dispositivos enviando dados ao
+              mesmo tempo e gravamos tudo — você recebe o relatório provando que a rede aguenta o pico sem travar.</p>
+          </article>
+        </div>
+        <div class="col gauge-col reveal" aria-hidden="true">
+          <div class="gauge-card">
+            <p class="gauge-label">Latência — VLAN 10 · Sensores</p>
+            <p class="gauge-value"><span id="latNum">0</span><small>ms</small></p>
+            <div class="gauge-bar"><i style="--w:22%"></i></div>
+            <p class="gauge-foot"><span>SLA 25&nbsp;ms</span><span class="ok">● dentro do limite</span></p>
+          </div>
+          <div class="spark-card">
+            <p class="gauge-label">Throughput agregado · 24&nbsp;h</p>
+            <svg viewBox="0 0 300 90" class="spark">
+              <polyline id="sparkLine" points="" fill="none" stroke="url(#sparkGrad)" stroke-width="3" stroke-linecap="round"/>
+              <defs><linearGradient id="sparkGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#00C7D7"/><stop offset="1" stop-color="#005DBA"/>
+              </linearGradient></defs>
+            </svg>
+            <p class="gauge-foot"><span>Streaming CFTV estável</span><span class="ok">● sem descarte</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4 — CYBERSEGURANÇA -->
+    <section class="slide slide-navy" data-index="4" id="slide-4">
+      <header class="slide-head">
+        <p class="kicker reveal">Bloco 04 · Cybersegurança</p>
+        <h2 class="reveal">Cada dispositivo, uma identidade</h2>
+        <p class="lead reveal">Rede plana e senha compartilhada foram o legado. O novo padrão autentica
+          criptograficamente <strong>cada</strong> sensor, câmera e porta — e não confia em ninguém por padrão.</p>
+      </header>
+      <div class="sec-wrap">
+        <div class="shield reveal">
+          <svg viewBox="0 0 200 220" class="shield-svg" aria-hidden="true">
+            <path d="M100 12 188 46v62c0 52-38 84-88 100C50 192 12 160 12 108V46L100 12Z"
+                  fill="rgba(0,199,215,.07)" stroke="#00C7D7" stroke-width="3"/>
+            <path d="M64 108l24 24 48-52" fill="none" stroke="#00C7D7" stroke-width="8"
+                  stroke-linecap="round" stroke-linejoin="round" class="shield-check"/>
+          </svg>
+          <p class="shield-cap">Certificado digital · Criptografia de ponta a ponta · Acesso por identidade</p>
+        </div>
+        <ul class="sec-list">
+          <li class="reveal"><strong>Acesso por certificado, não por senha</strong><span>Cada colaborador conecta com um certificado digital próprio — fim das senhas fixas que todo mundo compartilha.</span></li>
+          <li class="reveal"><strong>Dados dos sensores criptografados</strong><span>O gateway reconhece cada sensor na "portaria" e lacra as mensagens: ninguém consegue interceptar ou falsificar as leituras no caminho.</span></li>
+          <li class="reveal"><strong>Equipamentos blindados na configuração</strong><span>Cada switch, roteador e câmera é entregue com todas as portas de entrada desnecessárias fechadas e configurações reforçadas — como um prédio comercial que só mantém abertas as portas essenciais.</span></li>
+          <li class="reveal"><strong>Quarentena &amp; atualizações</strong><span>Dispositivo suspeito? Vai para uma área isolada da rede enquanto for verificado — nada entra em contato com a produção. Correções de segurança críticas são aplicadas em até 7 dias.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SLIDE 5 — FINANCEIRO -->
+    <section class="slide slide-light" data-index="5" id="slide-5">
+      <header class="slide-head">
+        <p class="kicker reveal">Bloco 05 · Financeiro</p>
+        <h2 class="reveal">Viabilidade: o último bloco fecha a torre</h2>
+        <p class="lead reveal">Custo × benefício com números claros: ciclo de vida de 48 meses, economia anual de
+          R$&nbsp;202&nbsp;mil e projeto autossustentável desde o primeiro ano.</p>
+      </header>
+      <div class="fin-wrap">
+        <div class="kpis">
+          <div class="kpi reveal"><p class="kpi-v">R$&nbsp;<span data-count="400" data-suffix="">0</span>&nbsp;mil</p><p class="kpi-l">CAPEX de investimento</p></div>
+          <div class="kpi reveal"><p class="kpi-v">R$&nbsp;<span data-count="6" data-suffix="">0</span>&nbsp;mil/mês</p><p class="kpi-l">OPEX recorrente</p></div>
+          <div class="kpi reveal"><p class="kpi-v"><span data-count="37" data-suffix="">0</span> meses</p><p class="kpi-l">Payback (~3,1 anos)</p></div>
+          <div class="kpi reveal"><p class="kpi-v"><span data-count="17.4" data-decimals="1" data-suffix="%">0</span></p><p class="kpi-l">ROI no ciclo de 4 anos</p></div>
+          <div class="kpi reveal kpi-accent"><p class="kpi-v">+R$&nbsp;<span data-count="120" data-suffix="">0</span>&nbsp;mil</p><p class="kpi-l">Geração de valor líquido</p></div>
+        </div>
+        <div class="fin-chart reveal" aria-label="Comparação de custo e ganho acumulados em 48 meses">
+          <div class="bar-row">
+            <span class="bar-label">Ganho acumulado</span>
+            <div class="bar bar-gain"><i style="--w:100%">R$ 808 mil</i></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Custo acumulado</span>
+            <div class="bar bar-cost"><i style="--w:85%">R$ 688 mil</i></div>
+          </div>
+          <p class="fin-note">Economia de R$&nbsp;16.833/mês cobre parcelas de ~R$&nbsp;8.208 do
+            <strong>BNDES Finame 4.0</strong> (8,5% a.a.) — viabilidade financeira comprovada.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6 — CANVAS DE NEGÓCIO -->
+    <section class="slide slide-light" data-index="6" id="slide-6">
+      <header class="slide-head">
+        <p class="kicker reveal">Anexo estratégico · Canvas de Negócio</p>
+        <h2 class="reveal">O modelo de negócio, <em>bloco a bloco</em></h2>
+        <p class="lead reveal">Business Model Canvas (9 blocos) da implantação IIoT nos centros de distribuição —
+          do problema ao valor gerado.</p>
+      </header>
+      <div class="bmc-grid">
 
         <div class="bmc-cell bmc-parceiros reveal">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg>Parceiros-chave</h3>
@@ -141,9 +297,9 @@
         <div class="bmc-cell bmc-atividades reveal">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3 3.7-3.7Z"/></svg>Atividades-chave</h3>
           <ul>
-            <li>Segmentação por VLANs com QoS estrito</li>
-            <li>Hardening L2 e autenticação 802.1X/EAP-TLS</li>
-            <li>Testes iperf3 e certificação Fluke ponto a ponto</li>
+            <li>Segmentação de redes com prioridade para alarmes</li>
+            <li>Equipamentos blindados e acesso por certificado</li>
+            <li>Testes de estresse e certificação ponto a ponto</li>
           </ul>
         </div>
 
@@ -218,179 +374,21 @@
           <span>bloco a bloco</span>
         </div>
 
-        </div><!-- /.bmc-grid -->
-      </div><!-- /tab-panel canvas -->
-    </section>
+        @@CELL@@
 
-    <!-- SLIDE 2 — INFRA -->
-    <section class="slide slide-light" data-index="2" id="slide-2">
-      <header class="slide-head">
-        <p class="kicker reveal">Bloco 02 · Infra</p>
-        <h2 class="reveal">Infraestrutura que cresce com você</h2>
-        <p class="lead reveal">A rede da NexBloc é montada em módulos independentes que se integram sem retrabalho —
-          do cabo de cobre à fibra, do switch PoE ao ar industrial.</p>
-      </header>
-      <div class="cols">
-        <div class="col card-col">
-          <article class="chip-card reveal">
-            <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="9" width="18" height="7" rx="1.5"/><path d="M6 16v2M12 16v2M18 16v2M7 12h.01M10 12h.01"/><path d="M8 9V6M16 9V6"/></svg>
-            <div><h3>Cabeamento &amp; backbone</h3>
-            <p>Cat6A blindado, certificado ponto a ponto por Fluke Networks, e fibra <strong>10&nbsp;GbE</strong>
-               com uplinks SFP+ — fim do gargalo de switching.</p></div>
-          </article>
-          <article class="chip-card reveal">
-            <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M13 2 4.5 13.5H11L9.5 22 19 9.5h-6.5L13 2Z"/></svg>
-            <div><h3>PoE+ / PoE++</h3>
-            <p>Alimentação elétrica pelos próprios cabos (802.3at/bt): até <strong>90&nbsp;W</strong> por porta e
-               <strong>-40%</strong> em custos de infraestrutura elétrica.</p></div>
-          </article>
-          <article class="chip-card reveal">
-            <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1.2" fill="currentColor"/></svg>
-            <div><h3>Wi-Fi 6/6E industrial</h3>
-            <p>OFDMA, BSS Coloring e TWT para vencer a “gaiola de Faraday” dos galpões — bateria de sensor com
-               vida útil de até <strong>5 anos</strong>.</p></div>
-          </article>
-          <article class="chip-card reveal">
-            <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="8" cy="7" r="1.6" fill="currentColor"/><circle cx="14" cy="12" r="1.6" fill="currentColor"/><circle cx="10" cy="17" r="1.6" fill="currentColor"/></svg>
-            <div><h3>Segmentação &amp; QoS</h3>
-            <p><strong>6 VLANs</strong> isoladas por perfil + Dual-Stack IPv4/IPv6. Alarmes críticos em DSCP&nbsp;EF
-               com fila LLQ: telemetria nunca disputa banda com vídeo.</p></div>
-          </article>
-        </div>
-        <aside class="col vlan-panel reveal" aria-label="Matriz de VLANs">
-          <h3>Matriz de segmentação</h3>
-          <table class="vlan-table">
-            <thead><tr><th>VLAN</th><th>Rede</th><th>Isolamento</th></tr></thead>
-            <tbody>
-              <tr><td>10</td><td>Sensores IIoT</td><td>só broker MQTT :8883</td></tr>
-              <tr><td>20</td><td>CFTV / Câmeras</td><td>só NVR / storage</td></tr>
-              <tr><td>30</td><td>Gestão e TI</td><td>SSHv2 · SNMPv3 · RADIUS</td></tr>
-              <tr><td>40</td><td>Corporativo</td><td>ERP / WMS / internet</td></tr>
-              <tr><td>50</td><td>Visitantes</td><td>web isolada</td></tr>
-              <tr><td>99</td><td>Quarentena</td><td>tudo bloqueado</td></tr>
-            </tbody>
-          </table>
-          <p class="note">MQTT sobre TLS 1.3 substitui o HTTP polling: menos overhead, alertas em micro-mensagens.</p>
-        </aside>
+        @@CELL@@
+
+        @@CELL@@
+
+        @@CELL@@
+
+        @@CELL@@
+
       </div>
     </section>
 
-    <!-- SLIDE 3 — MONITORAMENTO -->
-    <section class="slide slide-dark" data-index="3" id="slide-3">
-      <header class="slide-head">
-        <p class="kicker reveal">Bloco 03 · Monitoramento</p>
-        <h2 class="reveal">O que você não vê, não protege</h2>
-        <p class="lead reveal">Sem monitoramento, a rede opera às cegas. Este bloco dá olhos à infraestrutura:
-          estado, desempenho e tendência — em tempo real.</p>
-      </header>
-      <div class="cols">
-        <div class="col card-col">
-          <article class="card reveal">
-            <h3>Zabbix + Grafana via SNMPv3</h3>
-            <p>Coleta criptografada e inventário automatizado de ativos. Dashboards por VLAN mostram temperatura
-              da cadeia de frio, disponibilidade de links e carga dos switches PoE.</p>
-          </article>
-          <article class="card reveal">
-            <h3>Latência crítica &lt; 25 ms</h3>
-            <p>Alertas de telemetria priorizados de ponta a ponta. Um atraso significa produto perecível perdido —
-              monitorar é estancar perda.</p>
-          </article>
-          <article class="card reveal">
-            <h3>Testes de estresse iperf3</h3>
-            <p>Simulações na Packet Tracer e medições reais de throughput validam cada bloco <em>antes</em> de
-              entrar em operação. Documentação viva, nomenclatura padronizada.</p>
-          </article>
-        </div>
-        <div class="col gauge-col reveal" aria-hidden="true">
-          <div class="gauge-card">
-            <p class="gauge-label">Latência — VLAN 10 · Sensores</p>
-            <p class="gauge-value"><span id="latNum">0</span><small>ms</small></p>
-            <div class="gauge-bar"><i style="--w:22%"></i></div>
-            <p class="gauge-foot"><span>SLA 25&nbsp;ms</span><span class="ok">● dentro do SLA (25 ms)</span></p>
-          </div>
-          <div class="spark-card">
-            <p class="gauge-label">Throughput agregado · 24&nbsp;h</p>
-            <svg viewBox="0 0 300 90" class="spark" preserveAspectRatio="none">
-              <line x1="0" y1="67" x2="300" y2="67" stroke="rgba(255,255,255,.10)" stroke-width="1"/>
-              <line x1="0" y1="44" x2="300" y2="44" stroke="rgba(255,255,255,.10)" stroke-width="1"/>
-              <line x1="0" y1="21" x2="300" y2="21" stroke="rgba(255,255,255,.10)" stroke-width="1"/>
-              <polyline id="sparkLine" points="" fill="none" stroke="url(#sparkGrad)" stroke-width="3" stroke-linecap="round"/>
-              <defs><linearGradient id="sparkGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#00C7D7"/><stop offset="1" stop-color="#005DBA"/>
-              </linearGradient></defs>
-            </svg>
-            <p class="spark-axis"><span>-24 h</span><span>pico 940 Mbps</span><span>agora</span></p>
-            <p class="gauge-foot"><span>Streaming CFTV estável</span><span class="ok">● sem descarte</span></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 4 — CYBERSEGURANÇA -->
-    <section class="slide slide-navy" data-index="4" id="slide-4">
-      <header class="slide-head">
-        <p class="kicker reveal">Bloco 04 · Cybersegurança</p>
-        <h2 class="reveal">Cada dispositivo, uma identidade</h2>
-        <p class="lead reveal">Rede plana e senha compartilhada foram o legado. O novo padrão autentica
-          criptograficamente <strong>cada</strong> sensor, câmera e porta — e não confia em ninguém por padrão.</p>
-      </header>
-      <div class="sec-wrap">
-        <div class="shield reveal">
-          <svg viewBox="0 0 200 220" class="shield-svg" aria-hidden="true">
-            <path d="M100 12 188 46v62c0 52-38 84-88 100C50 192 12 160 12 108V46L100 12Z"
-                  fill="rgba(0,199,215,.07)" stroke="#00C7D7" stroke-width="3"/>
-            <path d="M64 108l24 24 48-52" fill="none" stroke="#00C7D7" stroke-width="8"
-                  stroke-linecap="round" stroke-linejoin="round" class="shield-check"/>
-          </svg>
-          <p class="shield-cap">802.1X · EAP-TLS · X.509</p>
-        </div>
-        <ul class="sec-list">
-          <li class="reveal"><strong>WPA3-Enterprise + 802.1X</strong><span>Autenticação por certificado com FreeRADIUS — adeus senhas estáticas compartilhadas.</span></li>
-          <li class="reveal"><strong>MQTTS sobre TLS 1.3</strong><span>Edge gateways industriais autenticam os sensores restritos em nome deles; tudo sai criptografado.</span></li>
-          <li class="reveal"><strong>Hardening de Camada 2</strong><span>DHCP Snooping, Dynamic ARP Inspection, BPDU Guard e Port Isolation: sem MITM, sem movimento lateral.</span></li>
-          <li class="reveal"><strong>Quarentena &amp; patches</strong><span>VLAN 99 para portas desativadas, política de atualização de firmware e inventário contínuo.</span></li>
-        </ul>
-      </div>
-      <footer class="sec-badges reveal" aria-label="Protocolos de segurança">
-        <span>802.1x</span><span>EAP-TLS</span><span>X.509</span>
-      </footer>
-    </section>
-
-    <!-- SLIDE 5 — FINANCEIRO -->
-    <section class="slide slide-light" data-index="5" id="slide-5">
-      <header class="slide-head">
-        <p class="kicker reveal">Bloco 05 · Financeiro</p>
-        <h2 class="reveal">Viabilidade: o último bloco fecha a torre</h2>
-        <p class="lead reveal">Custo × benefício com números claros: ciclo de vida de 48 meses, economia anual de
-          R$&nbsp;202&nbsp;mil e projeto autossustentável desde o primeiro ano.</p>
-      </header>
-      <div class="fin-wrap">
-        <div class="kpis">
-          <div class="kpi reveal"><p class="kpi-v">R$&nbsp;<span data-count="400" data-suffix="">0</span>&nbsp;mil</p><p class="kpi-l">CAPEX de investimento</p></div>
-          <div class="kpi reveal"><p class="kpi-v">R$&nbsp;<span data-count="6" data-suffix="">0</span>&nbsp;mil/mês</p><p class="kpi-l">OPEX recorrente</p></div>
-          <div class="kpi reveal"><p class="kpi-v"><span data-count="37" data-suffix="">0</span> meses</p><p class="kpi-l">Payback (~3,1 anos)</p></div>
-          <div class="kpi reveal"><p class="kpi-v"><span data-count="17.4" data-decimals="1" data-suffix="%">0</span></p><p class="kpi-l">ROI no ciclo de 4 anos</p></div>
-          <div class="kpi reveal kpi-accent"><p class="kpi-v">+R$&nbsp;<span data-count="120" data-suffix="">0</span>&nbsp;mil</p><p class="kpi-l">Geração de valor líquido</p></div>
-        </div>
-        <div class="fin-chart reveal" aria-label="Comparação de custo e ganho acumulados em 48 meses">
-          <div class="bar-row">
-            <span class="bar-label">Ganho acumulado</span>
-            <div class="bar bar-gain"><i style="--w:100%">R$ 808 mil</i></div>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">Custo acumulado</span>
-            <div class="bar bar-cost"><i style="--w:85%">R$ 688 mil</i></div>
-          </div>
-          <p class="fin-note">Economia de R$&nbsp;16.833/mês cobre parcelas de ~R$&nbsp;8.208 do
-            <strong>BNDES Finame 4.0</strong> (8,5% a.a.) — viabilidade financeira comprovada.</p>
-        </div>
-      </div>
-    </section>
-
-    
-
-    <!-- SLIDE 6 — AGRADECIMENTOS -->
-    <section class="slide slide-navy slide-thanks" data-index="6" id="slide-6">
+    <!-- SLIDE 7 — AGRADECIMENTOS -->
+    <section class="slide slide-navy slide-thanks" data-index="7" id="slide-7">
       <div class="thanks-inner">
         <p class="kicker reveal">Agradecimentos</p>
         <h2 class="reveal">Esta torre não foi construída sozinha.</h2>
@@ -409,14 +407,14 @@
           </div>
         </div>
         <p class="reveal thanks-note">Firjan SENAI Maracanã · Curso Técnico em Redes de Computadores</p>
-        <button class="cta ghost reveal" data-goto="7">Continuar
+        <button class="cta ghost reveal" data-goto="8">Continuar
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
       </div>
     </section>
 
-    <!-- SLIDE 7 — ENCERRAMENTO -->
-    <section class="slide slide-cover slide-end" data-index="7" id="slide-7">
+    <!-- SLIDE 8 — ENCERRAMENTO -->
+    <section class="slide slide-cover slide-end" data-index="8" id="slide-8">
       <div class="end-inner">
         <img class="logo-mark big reveal" src="assets/logo-nexbloc.png" alt="Símbolo NexBloc — letra N isométrica em blocos">
         <blockquote class="reveal">“Conexão sólida não é sorte.<br/>É <em>engenharia</em>.”</blockquote>
