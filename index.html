@@ -130,42 +130,42 @@
           <article class="chip-card reveal">
             <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="9" width="18" height="7" rx="1.5"/><path d="M6 16v2M12 16v2M18 16v2M7 12h.01M10 12h.01"/><path d="M8 9V6M16 9V6"/></svg>
             <div><h3>Cabeamento &amp; backbone</h3>
-            <p>Cat6A blindado, certificado ponto a ponto por Fluke Networks, e fibra <strong>10&nbsp;GbE</strong>
-               com uplinks SFP+ — fim do gargalo de switching.</p></div>
+            <p>Cabos de rede de alta performance testados um a um, e fibra óptica de <strong>10&nbsp;Gb</strong>
+               como espinha dorsal — fim do gargalo de conexão.</p></div>
           </article>
           <article class="chip-card reveal">
             <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M13 2 4.5 13.5H11L9.5 22 19 9.5h-6.5L13 2Z"/></svg>
             <div><h3>PoE+ / PoE++</h3>
-            <p>Alimentação elétrica pelos próprios cabos (802.3at/bt): até <strong>90&nbsp;W</strong> por porta e
+            <p>Os equipamentos recebem energia pelo próprio cabo de rede — sem fiação elétrica extra:
                <strong>-40%</strong> em custos de infraestrutura elétrica.</p></div>
           </article>
           <article class="chip-card reveal">
             <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1.2" fill="currentColor"/></svg>
             <div><h3>Wi-Fi 6/6E industrial</h3>
-            <p>OFDMA, BSS Coloring e TWT para vencer a “gaiola de Faraday” dos galpões — bateria de sensor com
+            <p>Sinal estável mesmo em galpões metálicos cheios de interferência — bateria dos sensores com
                vida útil de até <strong>5 anos</strong>.</p></div>
           </article>
           <article class="chip-card reveal">
             <svg class="chip-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="8" cy="7" r="1.6" fill="currentColor"/><circle cx="14" cy="12" r="1.6" fill="currentColor"/><circle cx="10" cy="17" r="1.6" fill="currentColor"/></svg>
-            <div><h3>Segmentação &amp; QoS</h3>
-            <p><strong>6 VLANs</strong> isoladas por perfil + Dual-Stack IPv4/IPv6. Alarmes críticos em DSCP&nbsp;EF
-               com fila LLQ: telemetria nunca disputa banda com vídeo.</p></div>
+            <div><h3>Segmentação &amp; prioridade</h3>
+            <p><strong>6 redes lógicas</strong> separadas por tipo de uso. Os alarmes críticos têm prioridade máxima:
+               os dados dos sensores nunca disputam espaço com as câmeras.</p></div>
           </article>
         </div>
         <aside class="col vlan-panel reveal" aria-label="Matriz de VLANs">
           <h3>Matriz de segmentação</h3>
           <table class="vlan-table">
-            <thead><tr><th>VLAN</th><th>Rede</th><th>Isolamento</th></tr></thead>
+            <thead><tr><th>VLAN</th><th>Rede</th></tr></thead>
             <tbody>
-              <tr><td>10</td><td>Sensores IIoT</td><td>só broker MQTT :8883</td></tr>
-              <tr><td>20</td><td>CFTV / Câmeras</td><td>só NVR / storage</td></tr>
-              <tr><td>30</td><td>Gestão e TI</td><td>SSHv2 · SNMPv3 · RADIUS</td></tr>
-              <tr><td>40</td><td>Corporativo</td><td>ERP / WMS / internet</td></tr>
-              <tr><td>50</td><td>Visitantes</td><td>web isolada</td></tr>
-              <tr><td>99</td><td>Quarentena</td><td>tudo bloqueado</td></tr>
+              <tr><td>10</td><td>Sensores IIoT</td></tr>
+              <tr><td>20</td><td>CFTV / Câmeras</td></tr>
+              <tr><td>30</td><td>Gestão e TI</td></tr>
+              <tr><td>40</td><td>Corporativo</td></tr>
+              <tr><td>50</td><td>Visitantes</td></tr>
+              <tr><td>99</td><td>Quarentena</td></tr>
             </tbody>
           </table>
-          <p class="note">MQTT sobre TLS 1.3 substitui o HTTP polling: menos overhead, alertas em micro-mensagens.</p>
+          <p class="note">Cada rede tem seu próprio "corredor" exclusivo: se uma área trava ou é atacada, as outras continuam funcionando normalmente.</p>
         </aside>
       </div>
     </section>
@@ -191,9 +191,9 @@
               monitorar é estancar perda.</p>
           </article>
           <article class="card reveal">
-            <h3>Testes de estresse iperf3</h3>
-            <p>Simulações na Packet Tracer e medições reais de throughput validam cada bloco <em>antes</em> de
-              entrar em operação. Documentação viva, nomenclatura padronizada.</p>
+            <h3>Testes de estresse</h3>
+            <p>Antes da entrega, colocamos a rede no limite: simulamos milhares de dispositivos enviando dados ao
+              mesmo tempo e gravamos tudo — você recebe o relatório provando que a rede aguenta o pico sem travar.</p>
           </article>
         </div>
         <div class="col gauge-col reveal" aria-hidden="true">
@@ -233,13 +233,13 @@
             <path d="M64 108l24 24 48-52" fill="none" stroke="#00C7D7" stroke-width="8"
                   stroke-linecap="round" stroke-linejoin="round" class="shield-check"/>
           </svg>
-          <p class="shield-cap">802.1X · EAP-TLS · X.509</p>
+          <p class="shield-cap">Certificado digital · Criptografia de ponta a ponta · Acesso por identidade</p>
         </div>
         <ul class="sec-list">
-          <li class="reveal"><strong>WPA3-Enterprise + 802.1X</strong><span>Autenticação por certificado com FreeRADIUS — adeus senhas estáticas compartilhadas.</span></li>
-          <li class="reveal"><strong>MQTTS sobre TLS 1.3</strong><span>Edge gateways industriais autenticam os sensores restritos em nome deles; tudo sai criptografado.</span></li>
-          <li class="reveal"><strong>Hardening de Camada 2</strong><span>DHCP Snooping, Dynamic ARP Inspection, BPDU Guard e Port Isolation: sem MITM, sem movimento lateral.</span></li>
-          <li class="reveal"><strong>Quarentena &amp; patches</strong><span>VLAN 99 para portas desativadas, política de atualização de firmware e inventário contínuo.</span></li>
+          <li class="reveal"><strong>Acesso por certificado, não por senha</strong><span>Cada colaborador conecta com um certificado digital próprio — fim das senhas fixas que todo mundo compartilha.</span></li>
+          <li class="reveal"><strong>Dados dos sensores criptografados</strong><span>O gateway reconhece cada sensor na "portaria" e lacra as mensagens: ninguém consegue interceptar ou falsificar as leituras no caminho.</span></li>
+          <li class="reveal"><strong>Equipamentos blindados na configuração</strong><span>Cada switch, roteador e câmera é entregue com todas as portas de entrada desnecessárias fechadas e configurações reforçadas — como um prédio comercial que só mantém abertas as portas essenciais.</span></li>
+          <li class="reveal"><strong>Quarentena &amp; atualizações</strong><span>Dispositivo suspeito? Vai para uma área isolada da rede enquanto for verificado — nada entra em contato com a produção. Correções de segurança críticas são aplicadas em até 7 dias.</span></li>
         </ul>
       </div>
     </section>
@@ -297,9 +297,9 @@
         <div class="bmc-cell bmc-atividades reveal">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3 3.7-3.7Z"/></svg>Atividades-chave</h3>
           <ul>
-            <li>Segmentação por VLANs com QoS estrito</li>
-            <li>Hardening L2 e autenticação 802.1X/EAP-TLS</li>
-            <li>Testes iperf3 e certificação Fluke ponto a ponto</li>
+            <li>Segmentação de redes com prioridade para alarmes</li>
+            <li>Equipamentos blindados e acesso por certificado</li>
+            <li>Testes de estresse e certificação ponto a ponto</li>
           </ul>
         </div>
 

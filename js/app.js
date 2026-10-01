@@ -36,22 +36,27 @@
     });
   });
 
-  /* ---- canvas de negócio: escala própria (painel oculto no carregamento) e
-        entra em fluxo normal quando o slide 1 está ativo; rolagem automática
-        ao abrir a aba para garantir que nada fique "para baixo da dobra" ---- */
-  const panelBmc = document.getElementById('panel-canvas');
-  if (panelBmc) {
-    panelBmc.classList.add('bmc-panel');
-    panelBmc.querySelectorAll('.reveal').forEach((el, i) => {
+  /* ---- canvas de negócio: escala as animações .reveal do painel e rola
+        automaticamente ao abrir a aba para garantir que nada fique
+        "para baixo da dobra" (funciona como slide autônomo ou aba) ---- */
+  function getBmcPanel() {
+    return document.getElementById('panel-canvas') || document.getElementById('slide-6');
+  }
+  const panelBmcInit = getBmcPanel();
+  if (panelBmcInit) {
+    panelBmcInit.classList.add('bmc-panel');
+    panelBmcInit.querySelectorAll('.reveal').forEach((el, i) => {
       el.style.setProperty('--d', String(260 + i * 70));
     });
   }
   function scrollBmcIntoView(smooth) {
-    const s1 = document.getElementById('slide-1');
-    if (!s1 || !panelBmc) return;
+    const panel = getBmcPanel();
+    if (!panel) return;
+    const scroller = panel.closest('.slide'); // slide-1 (aba) ou o próprio slide-6
+    if (!scroller) return;
     requestAnimationFrame(() => {
-      const y = Math.max(0, panelBmc.offsetTop - 16);
-      s1.scrollTo({ top: y, behavior: smooth ? 'smooth' : 'auto' });
+      const y = Math.max(0, panel.offsetTop - 16);
+      scroller.scrollTo({ top: y, behavior: smooth ? 'smooth' : 'auto' });
     });
   }
 
