@@ -212,17 +212,21 @@ button { font-family: inherit; cursor: pointer; }
   background: rgba(255,255,255,.055); border: 1px solid rgba(0,199,215,.18);
   border-radius: 14px; padding: 22px 24px;
 }
-.gauge-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .14em; color: var(--grafite); font-weight: 600; }
+.gauge-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .14em; color: rgba(255,255,255,.6); font-weight: 600; }
+.slide-light .gauge-label { color: var(--grafite); }
 .gauge-value { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.6rem, 4.5vw, 4rem); color: var(--ciano-bloco); margin: 8px 0; }
 .gauge-value small { font-size: 1.1rem; color: rgba(255,255,255,.6); margin-left: 6px; }
 .gauge-bar { height: 8px; border-radius: 99px; background: rgba(255,255,255,.12); overflow: hidden; }
 .gauge-bar i { display: block; height: 100%; width: 0; border-radius: 99px; background: var(--grad); transition: width 1.6s var(--ease) .6s; }
 .slide.is-active .gauge-bar i { width: var(--w); }
-.gauge-foot { display: flex; justify-content: space-between; margin-top: 12px; font-size: .74rem; color: var(--grafite); }
+.gauge-foot { display: flex; justify-content: space-between; margin-top: 12px; font-size: .74rem; color: rgba(255,255,255,.6); }
+.slide-light .gauge-foot { color: var(--grafite); }
 .gauge-foot .ok { color: var(--ciano-bloco); }
-.spark { width: 100%; height: 90px; margin-top: 10px; }
+.spark { width: 100%; height: 90px; margin-top: 10px; display: block; }
 .spark polyline { stroke-dasharray: 700; stroke-dashoffset: 700; transition: stroke-dashoffset 2.4s ease .5s; }
 .slide.is-active .spark polyline { stroke-dashoffset: 0; }
+.spark-axis { display: flex; justify-content: space-between; margin-top: 6px;
+  font-family: ui-monospace, monospace; font-size: .64rem; letter-spacing: .06em; color: rgba(255,255,255,.45); }
 
 /* ===================== SLIDE 4 · CYBERSEGURANÇA ========================= */
 .sec-wrap { display: grid; grid-template-columns: 300px 1fr; gap: clamp(24px, 4vw, 60px); align-items: center; }
@@ -241,6 +245,10 @@ button { font-family: inherit; cursor: pointer; }
 .sec-list li:hover { transform: translateX(8px); background: rgba(0,93,186,.18); }
 .sec-list strong { font-family: var(--font-display); font-size: 1rem; color: #fff; font-weight: 700; }
 .sec-list span { font-size: .88rem; line-height: 1.6; color: rgba(255,255,255,.75); }
+.sec-badges { display: flex; gap: 10px; margin-top: clamp(14px, 2.4vh, 26px); }
+.sec-badges span { font-family: ui-monospace, monospace; font-size: .72rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ciano-bloco); border: 1px solid rgba(0,199,215,.4);
+  border-radius: 999px; padding: 6px 14px; background: rgba(0,199,215,.07); }
 
 /* ======================== SLIDE 5 · FINANCEIRO ========================== */
 .fin-wrap { display: flex; flex-direction: column; gap: 26px; }
