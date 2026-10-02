@@ -27,10 +27,11 @@
     </div>
     <ul class="tower-list">
       <li><button class="tower-link" data-goto="1"><span class="tn-num">01</span> Empresa</button></li>
-      <li><button class="tower-link" data-goto="2"><span class="tn-num">02</span> Infra</button></li>
-      <li><button class="tower-link" data-goto="3"><span class="tn-num">03</span> Monitoramento</button></li>
-      <li><button class="tower-link" data-goto="4"><span class="tn-num">04</span> Cybersegurança</button></li>
-      <li><button class="tower-link" data-goto="5"><span class="tn-num">05</span> Financeiro</button></li>
+      <li><button class="tower-link team-link" data-goto="2"><span class="tn-num">＋</span> Equipe</button></li>
+      <li><button class="tower-link" data-goto="3"><span class="tn-num">02</span> Infra</button></li>
+      <li><button class="tower-link" data-goto="4"><span class="tn-num">03</span> Monitoramento</button></li>
+      <li><button class="tower-link" data-goto="5"><span class="tn-num">04</span> Cybersegurança</button></li>
+      <li><button class="tower-link" data-goto="6"><span class="tn-num">05</span> Financeiro</button></li>
       <li><button class="tower-link bmc-link" data-goto="1" data-tab-target="canvas"><span class="tn-num">＋</span> Canvas de negócio</button></li>
     </ul>
   </nav>
@@ -83,7 +84,7 @@
         <button class="tab" role="tab" data-tab="canvas" aria-selected="false">Canvas de negócio</button>
       </nav>
             <div class="tab-panel" data-panel="empresa">
-      <div class="cols">
+      <div class="cols cols-single">
         <div class="col card-col">
           <article class="card reveal">
             <h3>Objetivo</h3>
@@ -102,22 +103,6 @@
             <p>Entrega modular e auditável: cada bloco é testado, documentado e somado à operação —
               sem paradas e sem surpresas no caminho.</p>
           </article>
-        </div>
-        <div class="col team-col reveal">
-          <h3 class="team-title">Integrantes</h3>
-          <!-- Fotos: basta colocar o arquivo em assets/team/ com o nome indicado em data-photo.
-               Enquanto o arquivo não existir, o placeholder (silhueta + iniciais) é mantido. -->
-          <ul class="team-grid">
-            <li class="member"><span class="avatar" data-photo="assets/team/debora.jpeg" role="img" aria-label="Foto de Debora Cristina Gomes Ribeiro (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">DC</span></span><span class="member-name">Debora Cristina Gomes Ribeiro</span></li>
-            <li class="member"><span class="avatar" data-photo="assets/team/gabriel.jpeg" role="img" aria-label="Foto de Gabriel Washington Coelho da Silva (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">GW</span></span><span class="member-name">Gabriel Washington Coelho da Silva</span></li>
-            <li class="member"><span class="avatar" data-photo="assets/team/jonathan.jpg" role="img" aria-label="Foto de Jonathan Farias de Melo (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">JF</span></span><span class="member-name">Jonathan Farias de Melo</span></li>
-            <li class="member"><span class="avatar" data-photo="assets/team/lucas.jpeg" role="img" aria-label="Foto de Lucas Gabriel dos Santos Bernardes (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">LG</span></span><span class="member-name">Lucas Gabriel dos Santos Bernardes</span></li>
-            <li class="member"><span class="avatar" data-photo="assets/team/natan.jpeg" role="img" aria-label="Foto de Natan dos Santos Agostine (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">NS</span></span><span class="member-name">Natan dos Santos Agostine</span></li>
-          </ul>
-          <p class="team-note">As fotos dos integrantes aparecem aqui — basta colocar as imagens em <code>assets/team/</code>.</p>
-          <div class="values">
-            <span>Solidez técnica</span><span>Modularidade</span><span>Inovação contínua</span><span>Transparência</span>
-          </div>
         </div>
       </div>
             </div>
@@ -217,8 +202,51 @@
       </div>
     </section>
 
-    <!-- SLIDE 2 — INFRA -->
-    <section class="slide slide-light" data-index="2" id="slide-2">
+    <!-- SLIDE 2 — EQUIPE (fotos dos integrantes) -->
+    <section class="slide slide-navy" data-index="2" id="slide-2">
+      <header class="slide-head">
+        <p class="kicker reveal">Bloco 01 · Apresentação da empresa</p>
+        <h2 class="reveal">Quem constrói a torre, <em>bloco a bloco</em></h2>
+        <p class="lead reveal">A equipe NexBloc — curso Técnico em Redes de Computadores, Firjan SENAI Maracanã.
+          Cada integrante assenta um bloco do projeto: da engenharia à entrega.</p>
+      </header>
+      <ul class="team-gallery reveal">
+        <!-- Fotos: basta colocar o arquivo em assets/team/ com o nome indicado em data-photo.
+             Enquanto o arquivo não existir, o placeholder (silhueta + iniciais) é mantido. -->
+        <li class="member-card">
+          <span class="avatar avatar-lg" data-photo="assets/team/debora.jpeg" role="img" aria-label="Foto de Debora Cristina Gomes Ribeiro (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">DC</span></span>
+          <strong class="member-name">Debora Cristina Gomes Ribeiro</strong>
+          <span class="member-role">Equipe NexBloc</span>
+        </li>
+        <li class="member-card">
+          <span class="avatar avatar-lg" data-photo="assets/team/gabriel.jpeg" role="img" aria-label="Foto de Gabriel Washington Coelho da Silva (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">GW</span></span>
+          <strong class="member-name">Gabriel Washington Coelho da Silva</strong>
+          <span class="member-role">Equipe NexBloc</span>
+        </li>
+        <li class="member-card">
+          <span class="avatar avatar-lg" data-photo="assets/team/jonathan.jpg" role="img" aria-label="Foto de Jonathan Farias de Melo (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">JF</span></span>
+          <strong class="member-name">Jonathan Farias de Melo</strong>
+          <span class="member-role">Equipe NexBloc</span>
+        </li>
+        <li class="member-card">
+          <span class="avatar avatar-lg" data-photo="assets/team/lucas.jpeg" role="img" aria-label="Foto de Lucas Gabriel dos Santos Bernardes (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">LG</span></span>
+          <strong class="member-name">Lucas Gabriel dos Santos Bernardes</strong>
+          <span class="member-role">Equipe NexBloc</span>
+        </li>
+        <li class="member-card">
+          <span class="avatar avatar-lg" data-photo="assets/team/natan.jpeg" role="img" aria-label="Foto de Natan dos Santos Agostine (placeholder)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 21c1.4-4 4-6 7.5-6s6.1 2 7.5 6"/></svg><span class="avatar-initials" aria-hidden="true">NS</span></span>
+          <strong class="member-name">Natan dos Santos Agostine</strong>
+          <span class="member-role">Equipe NexBloc</span>
+        </li>
+      </ul>
+      <div class="values values-center reveal">
+        <span>Solidez técnica</span><span>Modularidade</span><span>Inovação contínua</span><span>Transparência</span>
+      </div>
+      <p class="team-note gallery-note reveal">As fotos dos integrantes aparecem nos cards acima — basta colocar as imagens em <code>assets/team/</code>.</p>
+    </section>
+
+    <!-- SLIDE 3 — INFRA -->
+    <section class="slide slide-light" data-index="3" id="slide-3">
       <header class="slide-head">
         <p class="kicker reveal">Bloco 02 · Infra</p>
         <h2 class="reveal">Infraestrutura que cresce com você</h2>
@@ -270,8 +298,8 @@
       </div>
     </section>
 
-    <!-- SLIDE 3 — MONITORAMENTO -->
-    <section class="slide slide-dark" data-index="3" id="slide-3">
+    <!-- SLIDE 4 — MONITORAMENTO -->
+    <section class="slide slide-dark" data-index="4" id="slide-4">
       <header class="slide-head">
         <p class="kicker reveal">Bloco 03 · Monitoramento</p>
         <h2 class="reveal">O que você não vê, não protege</h2>
@@ -317,8 +345,8 @@
       </div>
     </section>
 
-    <!-- SLIDE 4 — CYBERSEGURANÇA -->
-    <section class="slide slide-navy" data-index="4" id="slide-4">
+    <!-- SLIDE 5 — CYBERSEGURANÇA -->
+    <section class="slide slide-navy" data-index="5" id="slide-5">
       <header class="slide-head">
         <p class="kicker reveal">Bloco 04 · Cybersegurança</p>
         <h2 class="reveal">Cada dispositivo, uma identidade</h2>
@@ -344,8 +372,8 @@
       </div>
     </section>
 
-    <!-- SLIDE 5 — FINANCEIRO -->
-    <section class="slide slide-light" data-index="5" id="slide-5">
+    <!-- SLIDE 6 — FINANCEIRO -->
+    <section class="slide slide-light" data-index="6" id="slide-6">
       <header class="slide-head">
         <p class="kicker reveal">Bloco 05 · Financeiro</p>
         <h2 class="reveal">Viabilidade: o último bloco fecha a torre</h2>
@@ -376,8 +404,8 @@
     </section>
 
 
-    <!-- SLIDE 6 — AGRADECIMENTOS -->
-    <section class="slide slide-navy slide-thanks" data-index="6" id="slide-6">
+    <!-- SLIDE 7 — AGRADECIMENTOS -->
+    <section class="slide slide-navy slide-thanks" data-index="7" id="slide-7">
       <div class="thanks-inner">
         <p class="kicker reveal">Agradecimentos</p>
         <h2 class="reveal">Esta torre não foi construída sozinha.</h2>
@@ -402,8 +430,8 @@
       </div>
     </section>
 
-    <!-- SLIDE 7 — ENCERRAMENTO -->
-    <section class="slide slide-cover slide-end" data-index="7" id="slide-7">
+    <!-- SLIDE 8 — ENCERRAMENTO -->
+    <section class="slide slide-cover slide-end" data-index="8" id="slide-8">
       <div class="end-inner">
         <img class="logo-mark big reveal" src="assets/logo-nexbloc.png" alt="Símbolo NexBloc — letra N isométrica em blocos">
         <blockquote class="reveal">“Conexão sólida não é sorte.<br/>É <em>engenharia</em>.”</blockquote>
@@ -420,7 +448,7 @@
   <div class="hud">
     <div class="progress"><i id="progressBar"></i></div>
     <div class="hud-right">
-      <span class="counter"><b id="curNum">00</b> / <span id="totNum">06</span></span>
+      <span class="counter"><b id="curNum">00</b> / <span id="totNum">08</span></span>
       <button class="nav-btn" id="btnPrev" aria-label="Slide anterior">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
       </button>
