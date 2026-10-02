@@ -9,7 +9,6 @@
   const slides    = Array.from(document.querySelectorAll('.slide'));
   const towerBtns = Array.from(document.querySelectorAll('.tower-link:not(.bmc-link)'));
   const bmcLink   = document.querySelector('.tower-link.bmc-link');
-  const teamLink  = document.querySelector('.tower-link.team-link');
   const miniBlks  = Array.from(document.querySelectorAll('.mini-block'));
   const bar       = document.getElementById('progressBar');
   const curNum    = document.getElementById('curNum');
@@ -164,9 +163,8 @@
     bar.style.width = (n / (TOTAL - 1)) * 100 + '%';
     curNum.textContent = String(n).padStart(2, '0');
 
-    /* torre: acende o bloco correspondente (slides 1..6 = blocos 1..5; slide 2 = Equipe, extra) */
+    /* torre: acende o bloco correspondente (slides 1..5 = blocos 1..5) */
     towerBtns.forEach(b => b.classList.toggle('active', +b.dataset.goto === n));
-    if (teamLink) teamLink.classList.toggle('active', n === +teamLink.dataset.goto);
     miniBlks.forEach(b => {
       const blk = +b.dataset.slide;
       b.classList.toggle('lit', n > 0 ? blk <= n : false);
@@ -273,7 +271,7 @@
       case 'End':  e.preventDefault(); stopAutoplay(); goTo(TOTAL - 1); break;
       case 'f': case 'F': toggleFullscreen(); break;
       default:
-        if (/^[0-8]$/.test(e.key)) { stopAutoplay(); goTo(+e.key); }
+        if (/^[0-7]$/.test(e.key)) { stopAutoplay(); goTo(+e.key); }
     }
   });
 
